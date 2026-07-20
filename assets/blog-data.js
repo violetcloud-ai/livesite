@@ -26,7 +26,7 @@ const ALL_BLOG_POSTS = [
         content: `
             <!-- Responsive YouTube Wrapper Frame -->
             <div class="video-container">
-                <iframe src="https://youtu.be/OmvPcJmPbwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://youtu.be/OmvPcJmPbwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen></iframe>
             </div>
 
             <p>I created a stand-alone structural analysis program using Pygame (Orion.exe). I imported the structural analysis component of the artificial intelligence (AI) from Dynamo in my previous blogs into Pygame, which I'm calling Orion.exe.</p>
@@ -65,7 +65,7 @@ const ALL_BLOG_POSTS = [
         content: `
             <!-- Responsive YouTube Wrapper Frame -->
             <div class="video-container">
-                <iframe src="https://youtu.be/oG2ZiJDRQjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://youtu.be/oG2ZiJDRQjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen></iframe>
             </div>
 
             <p>This video presents the structural analysis of a humanoid skeleton model and how structural analysis can be applied to any generic shape, such as a humanoid skeleton (or robots, vehicles, etc.).</p>
@@ -86,7 +86,7 @@ const ALL_BLOG_POSTS = [
         content: `
             <!-- Responsive YouTube Wrapper Frame -->
             <div class="video-container">
-                <iframe src="https://youtu.be/INrVD__wh-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://youtu.be/INrVD__wh-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen></iframe>
             </div>
 
             <p>This video presents the automation of structural engineering using artificial intelligence (AI). The AI demonstrates its capability in designing a structure with both Reinforced Concrete (RC) and Steel, and it can automatically recognise transfer beams in the structure and whether it is necessary to use pile foundations based on the ground conditions. The entire process of analysis and design is automated by the AI.</p>
@@ -115,7 +115,7 @@ const ALL_BLOG_POSTS = [
         content: `
             <!-- Responsive YouTube Wrapper Frame -->
             <div class="video-container">
-                <iframe src="https://youtu.be/Y9l5-zt761w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://youtu.be/Y9l5-zt761w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen></iframe>
             </div>
 
             <p class="br-bottom">This video presents the following Python codes:</p>
@@ -158,7 +158,7 @@ const ALL_BLOG_POSTS = [
         content: `
             <!-- Responsive YouTube Wrapper Frame -->
             <div class="video-container">
-                <iframe src="https://youtu.be/LgWnJ4tlfeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://youtu.be/LgWnJ4tlfeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen></iframe>
             </div>
 
             <p>This video shows the Artificial Intelligence (AI) generating the structural model for a floor plan similar to Hong Kong Institution of Engineers (HKIE) Structural Exam 2016 Question #4. The input is simply the floor plan layout, min. column spacing, no-column zones, openings and floor height restrictions.</p>
@@ -228,7 +228,7 @@ const ALL_BLOG_POSTS = [
         content: `
             <!-- Responsive YouTube Wrapper Frame -->
             <div class="video-container">
-                <iframe src="https://youtu.be/kPL7RluPrLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://youtu.be/kPL7RluPrLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen></iframe>
             </div>
 
             <p>This video demonstrates the ability of Artificial Intelligence (AI) in generating residential-type structures. The AI adopts a "Wall-Beam" configuration without internal columns, where the core walls are used as the only vertical elements within the building boundary; otherwise, selected locations at the building edges are used as structural walls. In the video, Red, Purple and Blue areas allows for the use of structural walls. Green areas are balconies using cantilever structures as support.</p>
@@ -253,7 +253,7 @@ const ALL_BLOG_POSTS = [
         content: `
             <!-- Responsive YouTube Wrapper Frame -->
             <div class="video-container">
-                <iframe src="https://youtu.be/y8ukpGSUEGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://youtu.be/y8ukpGSUEGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen></iframe>
             </div>
 
             <p>We are pleased to present our very first video! This is a brief showcase of the capabilities of our Artificial Intelligence (AI).</p>
