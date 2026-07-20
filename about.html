@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>violetcloud.app - About</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZFHB93F06"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9ZFHB93F06');
+    </script>
+    
+    <link rel="stylesheet" href="assets/general-style.css">
+    <link rel="stylesheet" href="assets/about-style.css">
+</head>
+<body>
+
+    <!-- Main content wrapper to push footer down -->
+    <div class="content-wrapper">
+        <header class="sticky-header" id="header">
+            <div class="nav-container">
+                <!-- Left: Brand Assets -->
+                <a href="index.html" class="brand">
+                    <img src="assets/img/logo1.jpg" alt="Logo" class="logo-img">
+                    <span class="brand-name">violetcloud.app</span>
+                </a>              
+
+                <!-- Right: Navigation Menu -->
+                <nav>
+                    <button class="hamburger" aria-label="Toggle navigation" id="hamburger-btn">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="about.html" class="nav-link active">About</a></li>
+                        
+                        <!-- Projects Dropdown Parent -->
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">Projects <span class="arrow"></span></a>
+                            <ul class="submenu">
+                                <li><a href="#">(Coming Soon!)</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Section 1: Text Left, Image Right -->
+            <section class="content-row">
+                <div class="text-block">
+                    <h2>About the Company</h2>
+                    <div class="text-area">
+                        <div style="line-height: 1; display: inline-flex; align-items: center; gap: 8px;">
+                        <p><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="vertical-align: middle;">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>  Greater Vancouver, BC
+                        <img src="assets/img/can-flag.svg" alt="Canada Flag" style="height: 24px; width: auto; vertical-align: middle; margin-left: 5px; margin-top: -2px;"></p></div>
+                        <p>Established in 2020, Violet Cloud is dedicated to creating computer programs for automating structural engineering; integrating structural analysis, structural design, Building Information Modelling (BIM), and automation of drawing sheet generation.</p>
+                        <p>Our goal is to ultimately provide time and cost savings for the user, where high-level geometric inputs (such as the building size) are translated into polished engineered structural models with details in just a few clicks.</p>
+                        <p>This is a streamlined process to combine the engineering, modelling, detailing and drafting into one integrated and simplified workflow.</p>
+                        <p>Our Professional Engineer (P.Eng) has over 15 years of civil and structural engineering experience in consulting, contracting, 3D modelling and computer programming.</p>
+                    </div>
+                </div>
+                <div class="image-block">
+                    <img src="assets/img/about1.jpg" alt="Image 1 description" class="content-img" width="500" height="500">
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 violetcloud.app. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/menu-style.js"></script>
+
+</body>
+</html>

@@ -3,80 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>violetcloud.ai - Under Construction</title>
-    <style>
-        body {
-            background-color: #fff8c8; /* Exact pale cream background from image */
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Arial Black', Gadget, sans-serif;
-        }
-        .container {
-            text-align: center;
-        }
-        svg {
-            width: 180px;
-            height: 180px;
-            margin-bottom: 25px;
-        }
-        h1 {
-            color: #333333;
-            font-size: 18px;
-            letter-spacing: 2px;
-            margin: 0;
-        }
-    </style>
+    <title>violetcloud.app - Home</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZFHB93F06"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9ZFHB93F06');
+    </script>
+    
+    <link rel="stylesheet" href="assets/general-style.css">
+    <link rel="stylesheet" href="assets/index-style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Crossed wrench and screwdriver SVG -->
-        <svg viewBox="0 0 200 200">
-            
-            <!-- SCREWDRIVER (Angled from bottom-left to top-right) -->
-            <g transform="translate(100,100) rotate(45) translate(-100,-100)">
-                <!-- Handle Base Shadow/Darker side -->
-                <rect x="91" y="110" width="18" height="60" rx="6" fill="#D35400" />
-                <!-- Handle Main Body (Orange) -->
-                <rect x="91" y="110" width="14" height="60" rx="6" fill="#E67E22" />
-                <!-- Handle Center Highlight Strip -->
-                <rect x="95" y="115" width="4" height="50" rx="2" fill="#F39C12" />
-                
-                <!-- Metal Shaft -->
-                <rect x="95" y="45" width="10" height="65" fill="#BDC3C7" />
-                
-                <!-- Flathead Tip -->
-                <polygon points="92,45 108,45 105,33 95,33" fill="#95A5A6" />
-            </g>
+    <!-- Main content wrapper to push footer down -->
+    <div class="content-wrapper">
+        <header class="sticky-header" id="header">
+            <div class="nav-container">
+                <!-- Left: Brand Assets -->
+                <a href="index.html" class="brand">
+                    <img src="assets/img/logo1.jpg" alt="Logo" class="logo-img">
+                    <span class="brand-name">violetcloud.app</span>
+                </a>              
 
-            <!-- WRENCH (Angled from top-left to bottom-right) -->
-            <g transform="translate(100,100) rotate(-45) translate(-100,-100)">
-                <!-- Main Handle Shaft (Extended to y=155 so it is flush with screwdriver handle base) -->
-                <rect x="94" y="55" width="12" height="100" fill="#7F8C8D" />
-                
-                <!-- Closed Ring End (Slightly smaller outer circle, moved down to match extension) -->
-                <circle cx="100" cy="155" r="14" fill="#7F8C8D" />
-                
-                <!-- Hexagon Box-End Cutout (Cuts out to match background color) -->
-                <polygon points="100,148 106,151.5 106,158.5 100,162 94,158.5 94,151.5" fill="#fff8c8" />
-                
-                <!-- Open Wrench Head (Top) -->
-                <circle cx="100" cy="55" r="18" fill="#7F8C8D" />
-                
-                <!-- Hex Jaw Cutout (Aligned with diagonal handle trajectory) -->
-                <!-- Rectangular throat cutout -->
-                <rect x="91" y="32" width="18" height="22" fill="#fff8c8" />
-                <!-- Hex corner cutout at the back of throat -->
-                <polygon points="91,54 100,60 109,54" fill="#fff8c8" />
-            </g>
-            
-        </svg>
-        
-        <h1>NEW WEBSITE UNDER CONSTRUCTION</h1>
+                <!-- Right: Navigation Menu -->
+                <nav>
+                    <button class="hamburger" aria-label="Toggle navigation" id="hamburger-btn">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        
+                        <!-- Projects Dropdown Parent -->
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">Projects <span class="arrow"></span></a>
+                            <ul class="submenu">
+                                <li><a href="#">(Coming Soon!)</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero-section">
+            <!-- The Slider Container -->
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="assets/img/slideshow/slide1.png" alt="Slideshow Image 1">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/slideshow/slide2.png" alt="Slideshow Image 2">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/slideshow/slide3.png" alt="Slideshow Image 3">
+                </div>
+            </div>
+
+            <!-- Opaque Overlay Box Content -->
+            <div class="hero-overlay-box">
+                <h1>Structural design using artificial intelligence</h1>
+                <p>We develop computer programs that can automate structural models and drawings parametrically, tailored to your engineering needs.</p>
+                <a href="about.html" class="hero-cta-btn">Learn More</a>
+            </div>
+        </section>
+
     </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 violetcloud.app. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/menu-style.js"></script>
+    <script src="assets/index-slideshow.js"></script>
 
 </body>
 </html>

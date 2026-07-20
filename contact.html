@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>violetcloud.app - Contact</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZFHB93F06"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9ZFHB93F06');
+    </script>
+    
+    <link rel="stylesheet" href="assets/general-style.css">
+    <link rel="stylesheet" href="assets/contact-style.css">
+    <link rel="stylesheet" href="assets/form-input-style.css">
+</head>
+<body>
+
+    <!-- Main content wrapper to push footer down -->
+    <div class="content-wrapper">
+        <header class="sticky-header" id="header">
+            <div class="nav-container">
+                <!-- Left: Brand Assets -->
+                <a href="index.html" class="brand">
+                    <img src="assets/img/logo1.jpg" alt="Logo" class="logo-img">
+                    <span class="brand-name">violetcloud.app</span>
+                </a>              
+
+                <!-- Right: Navigation Menu -->
+                <nav>
+                    <button class="hamburger" aria-label="Toggle navigation" id="hamburger-btn">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        
+                        <!-- Projects Dropdown Parent -->
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">Projects <span class="arrow"></span></a>
+                            <ul class="submenu">
+                                <li><a href="#">(Coming Soon!)</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Reuse your signature responsive layout grid structure -->
+            <div class="blog-layout-grid">
+                
+                <!-- Left Column: The Contact Form Panel -->
+                  <form id="contact-form-wrapper" action="https://formsubmit.co/f0e354a6f9fcd312e5dc8f4113360ae0" method="POST">
+                    <input type="hidden" name="_next" value="https://www.violetcloud.app/thank-you.html">
+                    <h2>Contact Form</h2>
+                    <p style="margin-bottom: 20px;">If you would like to contact us, please fill in the form below and click the "Submit" button.</p>
+                    
+                    <div class="form-row-flex">
+                        <div class="form-field-group">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name" required class="text-input-field">
+                        </div>
+
+                        <div class="form-field-group">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required class="text-input-field">
+                        </div>
+                    </div>
+
+                    <div class="form-field-group">
+                        <input type="text" id="company" name="company" placeholder="Company/Organization (optional)" class="text-input-field">
+                    </div>
+
+                    <div class="form-field-group">
+                        <input type="email" id="email" name="email" placeholder="Email Address" required class="text-input-field">
+                    </div>
+
+                    <div class="form-field-group">
+                        <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="Message (optional)" class="textarea-input-field"></textarea>
+                        <div id="charCounter" style="font-family: 'Urbanist', sans-serif; font-size: 11px; color: #6b7280; text-align: right; margin-top: 4px;">1000 characters remaining</div>
+                    </div>
+
+                    <button id="inputSubmit" name="inputSubmit" type="submit" class="submit-btn">Submit</button>
+                </form>
+
+                <!-- Right Column: Sidebar Social Media Channels Panel -->
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Connect With Us</h3>
+                        <p class="body-small" style="color: #4b5563; margin-bottom: 20px;">Follow our official digital social profiles to keep track of development loops and updates.</p>
+                        
+                        <ul class="archive-list">
+                            <!-- YouTube Link and Icon -->
+                            <li>
+                                <a href="https://www.youtube.com/@violetcloudapp" target="_blank" rel="noopener">
+                                    <span class="social-link-content">
+                                        <!-- YouTube Icon -->
+                                        <svg viewBox="0 0 24 24" class="social-icon"><path fill="currentColor" d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.516 0-9.387.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.516 0 9.387-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                        YouTube
+                                    </span>
+                                    <span class="archive-count">&rarr;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 violetcloud.app. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/menu-style.js"></script>
+    <script src="assets/form-events.js"></script>
+
+</body>
+</html>

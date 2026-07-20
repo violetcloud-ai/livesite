@@ -1,0 +1,3768 @@
+{
+  "Uuid": "538e4d28-86a4-4e71-908f-9147734925d5",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "VC Str Analysis in Dynamo (20201102)",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math.PI": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "MA = [[1,1,0,3],\n      [2,1,-1,1],\n      [3,-1,-1,2],\n      [-1,2,3,-1]];\n\nMB = [[2,1,4],\n      [8,-3,2],\n      [4,11,-1]];\n\nMC = [[1,2,4],\n      [3,8,14],\n      [2,6,13]];\n\nMD = [[2,4,6],\n      [0,-1,-8],\n      [0,0,96]];",
+      "Id": "7d54fbdacbfa48fcab2f3989f186c11f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1bfc339bb5744024b2ba5481b4b1a1bc",
+          "Name": "",
+          "Description": "MA",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a13a66ac8b5a4863bb5a440b4f54d96e",
+          "Name": "",
+          "Description": "MB",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f183396e5673482584b65ebc6f59f33e",
+          "Name": "",
+          "Description": "MC",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6977dc43a6b5441fa3f24d8e4e774edd",
+          "Name": "",
+          "Description": "MD",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 3.0,
+      "MinimumValue": 0.1,
+      "StepValue": 0.1,
+      "InputValue": 0.8,
+      "Id": "e13dee31af724bafa41b032759071bb1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c1939bdb59f345be91c8f5516251c40c",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Ctrl =\n[Show_Ex,\nP_Scale,\nV_Scale,\nM_Scale];",
+      "Id": "245b50a5df7e4a018c6cfb987f5704b2",
+      "Inputs": [
+        {
+          "Id": "5e7885ea02c64cc6a2474f401fbf44a6",
+          "Name": "Show_Ex",
+          "Description": "Show_Ex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4e539909026b4cdf9f95bba5805640a5",
+          "Name": "P_Scale",
+          "Description": "P_Scale",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7123072256d74cae8a0c08f4089ff620",
+          "Name": "V_Scale",
+          "Description": "V_Scale",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dc569bf4f38e4d42ae44b7f0423d39ea",
+          "Name": "M_Scale",
+          "Description": "M_Scale",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f1a8dd84c6744c50b7c631334762c7a7",
+          "Name": "",
+          "Description": "Ctrl",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Example =\n[E1, E2,\nE3, E4,\nE5];",
+      "Id": "3982263ed7404e99bfc78fbb96db8770",
+      "Inputs": [
+        {
+          "Id": "2e44359815924375b8683edbce320ca2",
+          "Name": "E1",
+          "Description": "E1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "96f514626c80410aa699633960c78713",
+          "Name": "E2",
+          "Description": "E2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6acd965c66df4dce8ef78ed60617872b",
+          "Name": "E3",
+          "Description": "E3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "580e93dc340245e29d7744508e699dff",
+          "Name": "E4",
+          "Description": "E4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "23180053f7994c2cbe15262713ba8a1d",
+          "Name": "E5",
+          "Description": "E5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "352acbc0e7b44c04ab741c9903862175",
+          "Name": "",
+          "Description": "Example",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 5.0,
+      "MinimumValue": 1.0,
+      "StepValue": 1.0,
+      "InputValue": 4.0,
+      "Id": "7335c2ad1f9e4419b365fe7a7c6cadae",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4f270cdbb4ad4228bc6e32bac95ab60d",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//Examples 1~3 from https://www.erbakan.edu.tr/storage/files/department/insaatmuhendisligi/editor/DersSayfalari/YapSt2/07_Matrix_Frame.pdf",
+      "Id": "6dbaf129787c4b96bdf80e9dab86fa7e",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Enable Python support and load DesignScript library\r\nimport clr\r\nimport math\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\n\r\n# The inputs to this node will be stored as a list in the IN variables.\r\ndataEnteringNode = IN\r\n\r\n# Place your code below this line\r\nM = IN[0] #Input Matrix\r\n\r\ndef Matrix_Mult(M1, M2):\r\n    M3 = [[0 for j in range(0,len(M2[0]))] for i in range(0,len(M1))] \r\n    for i in range(0,len(M3)):\r\n        for j in range(0,len(M3[i])):\r\n            Val_M3 = 0\r\n            for p in range(0,len(M1[0])):\r\n                Val_M1 = M1[i][p]\r\n                Val_M2 = M2[p][j]\r\n                Val_M3 += Val_M1 * Val_M2\r\n            M3[i][j] = Val_M3\r\n    return M3\r\n\r\ndef Matrix_Inv_Tri(Type, M):\r\n    M_r = [[0 for j in range(0,len(M[i])*2)] for i in range(0,len(M))]\r\n    for i in range(0,len(M)): \r\n        M_r[i][len(M)+i] = 1.0\r\n        for j in range(0,len(M[i])): M_r[i][j] = M[i][j]\r\n    if Type == \"Upper\": \r\n        for i in range(0,len(M_r)): \r\n            ind = len(M_r)-1-i; Coeff = 1.0*M_r[ind][ind]\r\n            for j in range(0,len(M_r[i])): M_r[ind][j] = M_r[ind][j] / Coeff\r\n            for p in range(0,i):\r\n                ind_n = ind+p+1; Coeff = 1.0*M_r[ind][ind_n]\r\n                for q in range(0,len(M_r[ind])): M_r[ind][q] -= Coeff * M_r[ind_n][q]\r\n    elif Type == \"Lower\":\r\n        for i in range(0,len(M_r)): \r\n            Coeff = 1.0*M_r[i][i]\r\n            for j in range(0,len(M_r[i])): M_r[i][j] = M_r[i][j] / Coeff\r\n            for p in range(0,i):\r\n                ind_n = i-p-1; Coeff = 1.0*M_r[i][ind_n]\r\n                for q in range(0,len(M_r[i])): M_r[i][q] -= Coeff * M_r[ind_n][q]\r\n    M_inv = [[0 for j in range(0,len(M[i]))] for i in range(0,len(M))]\r\n    for i in range(0,len(M)): \r\n        for j in range(0,len(M[i])): M_inv[i][j] = M_r[i][j+len(M)]   \r\n    return M_inv \r\n\r\ndef Matrix_Inv_LU(M, Output_Components = \"No\"):\r\n    L_r = [[0 for j in range(0,len(M[i]))] for i in range(0,len(M))]\r\n    U_r = [[0 for j in range(0,len(M[i]))] for i in range(0,len(M))]\r\n    for i in range(0,len(M)): \r\n        U_r[0][i] = M[0][i]\r\n        for j in range(0,len(M[i])): \r\n            if i == j: L_r[i][j] = 1.0\r\n            elif j == 0: L_r[i][j] = M[i][j] / U_r[0][0]\r\n    for i in range(1,len(M)):\r\n        for j in range(0,len(M[i])):\r\n            if j >= i: \r\n                U_0 = 0\r\n                for p in range(0,i): U_0 += L_r[i][0+p] * U_r[0+p][j]\r\n                U_r[i][j] = M[i][j] - U_0 \r\n            if j < i and j > 0:\r\n                L_0 = 0\r\n                for q in range(0,j): L_0 += L_r[i][0+q] * U_r[0+q][j]\r\n                L_r[i][j] = (M[i][j] - L_0) / U_r[j][j]\r\n    U_inv = Matrix_Inv_Tri(\"Upper\", U_r)\r\n    L_inv = Matrix_Inv_Tri(\"Lower\", L_r) \r\n    M_inv = Matrix_Mult(U_inv, L_inv)\r\n    Output = M_inv\r\n    if Output_Components == \"Yes\": Output = M_inv, L_r, U_r, L_inv, U_inv\r\n    return Output\r\n   \r\n#Output\r\nM_inv, L_r, U_r, L_inv, U_inv = Matrix_Inv_LU(M, Output_Components = \"Yes\")\r\n\r\n# Assign your output to the OUT variable.\r\nOUT = M_inv, L_r, U_r, L_inv, U_inv",
+      "VariableInputPorts": true,
+      "Id": "b9fe5773502b4bdc843e39f5bd96b405",
+      "Inputs": [
+        {
+          "Id": "d3db64ea8b024716b83947162d1b04a5",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e03d79d083d142789bd81b66ccedb160",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[0];",
+      "Id": "941da8334d6e493fb79878f5e28a8f31",
+      "Inputs": [
+        {
+          "Id": "9709443314da4f7284273d86b5747733",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "82022057e0c949b781515697ac39a8b2",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[1];",
+      "Id": "2b99f007728e46d1b5f07ddfc9eb4c2f",
+      "Inputs": [
+        {
+          "Id": "0751707b79b3487f9ffe996d449e564a",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d5a654b5d18a44ab96560fc5cfe4b6b1",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[2];",
+      "Id": "7af95d41936041368abc80265278f894",
+      "Inputs": [
+        {
+          "Id": "1563a3b672a149dfbeadac6e130db7a2",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3d52f449b00f4d3a8dd799e6bd1a9c9d",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[3];",
+      "Id": "25b125d18afc46ad98d0556244e8e972",
+      "Inputs": [
+        {
+          "Id": "52c3af503adc43c7a3f5a4799cec0d53",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "90e76a10abd0493eba7d3c02aa011955",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//Please visit www.violetcloud.ai",
+      "Id": "e380bbd0f1464bc8b88063ebb92753de",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//Joint Data = [Name, Restraint (F=Free), Coord (XYZ mm), Jt Forces (kN)]\nSet_X = 0;\nSet_Y = 0;\nJt_A = [\"A\", [\"F\", \"R\", \"F\"], [Set_X + 0, Set_Y, 6000], [0, 0, 0]];\nJt_B = [\"B\", [\"F\", \"F\", \"F\"], [Set_X + 6000, Set_Y, 6000], [5, 0, 0]];\nJt_C = [\"C\", [\"R\", \"R\", \"R\"], [Set_X + 6000, Set_Y, 0], [0, 0, 0]];\nJt_Info = [Jt_B, Jt_A, Jt_C];\n\n//Material Property = [Elastic Mod MPa, MOI mm4, Area mm2]\nE_m = 200000;\nI_m = 60*1000000;\nA_m = 600;\nProp = [E_m, A_m, I_m];\n\n//Member data = [Name, Jt_i, Jt_j, UDL (kN/m), Material Property]\nMbr_1 = [\"Mbr 1\", \"A\", \"B\", 0, Prop];\nMbr_2 = [\"Mbr 2\", \"B\", \"C\", 0, Prop];\nMbr_Info = [Mbr_1, Mbr_2];\n\n//Input Summary\nInput = [Jt_Info, Mbr_Info];",
+      "Id": "f04759ebd1c1468cb9842d5644ad1b5c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "28ec7e26ac8e4c4a95b2148eb1c98fbd",
+          "Name": "",
+          "Description": "Set_X",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "490ab624f2f74724975732fb299b7ea9",
+          "Name": "",
+          "Description": "Set_Y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5bcb2fe5c9e44363a534cb57823c695b",
+          "Name": "",
+          "Description": "Jt_A",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "54e3d23859064dada7d3cdcdbd381596",
+          "Name": "",
+          "Description": "Jt_B",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1afa402d595b4d0dac9b48103e06fc59",
+          "Name": "",
+          "Description": "Jt_C",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "db45b2541bf048acb89c64877a956ebf",
+          "Name": "",
+          "Description": "Jt_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "de033503c3f54bdb83a6e1f8b4270dea",
+          "Name": "",
+          "Description": "E_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5321e01e5971465bb48c1f7337806951",
+          "Name": "",
+          "Description": "I_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f01bea37080d49c5b6bc142c4e68620b",
+          "Name": "",
+          "Description": "A_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e49b7764292742c49dd1a499ed0d5f94",
+          "Name": "",
+          "Description": "Prop",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c83a997e337f41f6bfa3e7c6c8fab60e",
+          "Name": "",
+          "Description": "Mbr_1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "01f1cfbb6cbc47448ea40e10ea6fb806",
+          "Name": "",
+          "Description": "Mbr_2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1448bca1d0a74afea2065cd5c69a889c",
+          "Name": "",
+          "Description": "Mbr_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "35000393e70d4f1eb8ccd928e1a55817",
+          "Name": "",
+          "Description": "Input",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//Joint Data = [Name, Restraint (F=Free), Coord (XYZ mm), Jt Forces (kN)]\nSet_X = 0;\nSet_Y = 0;\nJt_A = [\"A\", [\"R\", \"R\", \"R\"], [Set_X + 0, Set_Y, 0], [0, 0, 0]];\nJt_B = [\"B\", [\"F\", \"F\", \"F\"], [Set_X + 6000, Set_Y, 4500], [0, 0, 0]];\nJt_C = [\"C\", [\"R\", \"R\", \"R\"], [Set_X + 12000, Set_Y, 4500], [0, 0, 0]];\nJt_Info = [Jt_B, Jt_A, Jt_C];\n\n//Material Property = [Elastic Mod MPa, MOI mm4, Area mm2]\nE_m = 200000;\nI_m = 60*1000000;\nA_m = 600;\nProp = [E_m, A_m, I_m];\n\n//Member data = [Name, Jt_i, Jt_j, UDL (kN/m), Material Property]\nMbr_1 = [\"Mbr 1\", \"A\", \"B\", 0.0, Prop];\nMbr_2 = [\"Mbr 2\", \"B\", \"C\", 3.0, Prop];\nMbr_Info = [Mbr_1, Mbr_2];\n\n//Input Summary\nInput = [Jt_Info, Mbr_Info];",
+      "Id": "b6fe5aadd07e453088451d90e0e8a5c8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f32638ae028d49d691f3d471d209cabe",
+          "Name": "",
+          "Description": "Set_X",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d3bc5ef1df9c4726bfba10ff128067b1",
+          "Name": "",
+          "Description": "Set_Y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "13309795914f4f95835c675beed5a824",
+          "Name": "",
+          "Description": "Jt_A",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6e3f5f33f3944445bff0cc0ed42c9fab",
+          "Name": "",
+          "Description": "Jt_B",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d990c142a94645ea87892a15c754a205",
+          "Name": "",
+          "Description": "Jt_C",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "be3dc0e55beb421c84d5361072082491",
+          "Name": "",
+          "Description": "Jt_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c04b8357e67f4de6a984dc08fe5fd67c",
+          "Name": "",
+          "Description": "E_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6626bfe9ca5e4c3ab38c3f0c1dc42629",
+          "Name": "",
+          "Description": "I_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "76d959e715a1494293cbd67563bce16e",
+          "Name": "",
+          "Description": "A_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9175f6ba113541c9932690d683378fa9",
+          "Name": "",
+          "Description": "Prop",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5703e482fa6e4cfc90ee120d9074a32b",
+          "Name": "",
+          "Description": "Mbr_1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b5ba5c17e0fb4430a0ca44d832f63a19",
+          "Name": "",
+          "Description": "Mbr_2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ccab49496ec545658441d4a64aca2625",
+          "Name": "",
+          "Description": "Mbr_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8f8a8f72d7ee4ef28047b10d8741de62",
+          "Name": "",
+          "Description": "Input",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "71739b05292945f69a0fc76fd599e8c8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6807bed9f96c49eeb18923f04081dec0",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "3b6a7c0474d84b4fa86cd19819c1c371",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e35e18fac919496a9e2943f4063f037c",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "b10604a67ee5445881e16a51dbc49a2c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7ad84498bf1d429dae9de66d20541bf8",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Results = IN[1];",
+      "Id": "9b7efdaed27842ad8c964ba9f2f1fd14",
+      "Inputs": [
+        {
+          "Id": "457f6399b97e456ea23ff44c8ec44779",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a6a06a271861471f875bebc4341c034c",
+          "Name": "",
+          "Description": "Results",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[0];",
+      "Id": "dcc5fee3b1af40c7b425cc030acfb018",
+      "Inputs": [
+        {
+          "Id": "de1cc7433af54ae7a87de426b761a683",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "25519b44ad534259bb5aef619de925d9",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Enable Python support and load DesignScript library\r\nimport clr\r\nimport math\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\n\r\n\r\n# The inputs to this node will be stored as a list in the IN variables.\r\ndataEnteringNode = IN\r\n\r\n# Place your code below this line\r\nShow_Ex = int(IN[0][0])\r\nForce_Scale = IN[0][1:]\r\nExamples = IN[1]\r\nJt_Info, Mbr_Info = Examples[Show_Ex-1]\r\n\r\nText_Size = 420\r\nText_Shift_r = 0.3\r\nDynamo_Offset = 0.9*Text_Size\r\nModel_Size = 100\r\nDim_D = Model_Size\r\nDim_B = Model_Size\r\nSphere_Rad = Model_Size\r\nd0_Tol = 5 * math.pi/180.0 #deg to rad\r\ndL_Tol = 10 #in mm\r\ndr_Tol = 0.001\r\n\r\nDraw_Ref = [\"Framing\", \"Applied Loads\", \"Internal Forces\", \"Reactions\", \"Dimensions\"]\r\nDraw_Data = [[] for i in range(0,len(Draw_Ref))]\r\n\r\n############################## Control Functions ########################################\r\ndef Frame_Analysis(Jt_List, Mbr_List):\r\n    ind_Name, ind_Res, ind_Jt, ind_Force, ind_React, ind_Defl, ind_Int_F = 0, 1, 2, 3, 4, 5, 5; DOF = 3\r\n    #Joint numbering references and 0 terms\r\n    Jt_Lib = []\r\n    for i in range(0,len(Jt_List)):\r\n        Jt_Lib += [Jt_List[i][ind_Name]]\r\n        Ini_Reaction = [0,0,0]\r\n        Ini_Defl = [0,0,0]\r\n        Jt_List[i] += [Ini_Reaction, Ini_Defl]\r\n    #Global K\r\n    Gl_K = [[0 for j in range(0,len(Jt_List)*DOF)] for i in range(0,len(Jt_List)*DOF)]\r\n    for j in range(0,len(Mbr_List)):\r\n        Mbr_Name, Name_i, Name_j, Mbr_UDL, Mat_Prop = Mbr_List[j]\r\n        Ini_Int_F = [0,0,0,0,0,0]\r\n        Mbr_List[j] += [Ini_Int_F]\r\n        ind_i = Jt_Lib.index(Name_i); Jt_i = Jt_List[ind_i][ind_Jt]\r\n        ind_j = Jt_Lib.index(Name_j); Jt_j = Jt_List[ind_j][ind_Jt]\r\n        V_n, M_n = End_Forces(Jt_i, Jt_j, Mbr_UDL)\r\n        Mbr_F = [0.0, V_n, M_n, 0.0, V_n, -M_n]\r\n        Gl_Mbr_F = Transform_Forces(\"Global\", Jt_i, Jt_j, Mbr_F)\r\n        Jt_List[ind_i][ind_Force][0] -= Gl_Mbr_F[0]\r\n        Jt_List[ind_i][ind_Force][1] -= Gl_Mbr_F[1]\r\n        Jt_List[ind_i][ind_Force][2] -= Gl_Mbr_F[2]\r\n        Jt_List[ind_j][ind_Force][0] -= Gl_Mbr_F[3]\r\n        Jt_List[ind_j][ind_Force][1] -= Gl_Mbr_F[4]\r\n        Jt_List[ind_j][ind_Force][2] -= Gl_Mbr_F[5]\r\n        Lc_K = Plane_K(Jt_i, Jt_j, Mat_Prop) #in kN, m\r\n        for p in range(0,len(Lc_K)):\r\n            for q in range(0,len(Lc_K[p])):\r\n                if p > 2: ii = ind_j*DOF + p - DOF  \r\n                else: ii = ind_i*DOF + p\r\n                if q > 2: jj = ind_j*DOF + q - DOF\r\n                else: jj = ind_i*DOF + q\r\n                Gl_K[ii][jj] += Lc_K[p][q]\r\n    #Joint numbering references and 0 terms\r\n    Gl_F, Gl_K_null = [], []\r\n    for i in range(0,len(Jt_List)):\r\n        Jt_Force = Jt_List[i][ind_Force]\r\n        Jt_Res = Jt_List[i][ind_Res]\r\n        for j in range(0,DOF):\r\n            if Jt_Res[j] == \"R\": Gl_K_null += [i*DOF + j]\r\n            else: Gl_F += [[Jt_Force[j]]] \r\n    #Global K for Unrestrained DOF\r\n    Gl_K_mod, Gl_ind = [], []\r\n    for i in range(0,len(Gl_K)):\r\n        if i not in Gl_K_null:\r\n            Gl_K_row = []\r\n            for j in range(0,len(Gl_K[i])):\r\n                if j not in Gl_K_null:\r\n                    Gl_K_row += [Gl_K[i][j]]\r\n            Gl_K_mod += [Gl_K_row]; Gl_ind += [i]\r\n    #Global Displacement/Rotation\r\n    Inv_K = Matrix_Inv_LU(Gl_K_mod)\r\n    Gl_D = Matrix_Mult(Inv_K, Gl_F) #in m, rad\r\n    for i in range(0,len(Jt_List)):\r\n        for j in range(0,3):\r\n            ind = i*DOF + j\r\n            for q in range(0,len(Gl_D)):\r\n                if ind == Gl_ind[q]: Jt_List[i][ind_Defl][j] = Gl_D[q][0]; break\r\n    #Local Forces\r\n    for j in range(0,len(Mbr_List)):\r\n        Mbr_Name, Name_i, Name_j, Mbr_UDL, Mat_Prop, Int_F = Mbr_List[j]\r\n        ind_i = Jt_Lib.index(Name_i); Jt_i = Jt_List[ind_i][ind_Jt]\r\n        ind_j = Jt_Lib.index(Name_j); Jt_j = Jt_List[ind_j][ind_Jt]\r\n        Lc_K = Plane_K(Jt_i, Jt_j, Mat_Prop)\r\n        Lc_D = [[0] for p in range(0,2*DOF)]\r\n        for p in range(0,DOF*2):\r\n            Lc_ind = ind_i*DOF + p\r\n            if p > 2: Lc_ind = ind_j*DOF + p - DOF  \r\n            for q in range(0,len(Gl_D)):\r\n                if Lc_ind == Gl_ind[q]: Lc_D[p] = Gl_D[q]; break\r\n        #Global/Local Internal Forces\r\n        Gl_M_F = Matrix_Mult(Lc_K, Lc_D)\r\n        Gl_M_Fr = []\r\n        for p in range(0,len(Gl_M_F)): Gl_M_Fr += [Gl_M_F[p][0]]\r\n        Lc_M_F = Transform_Forces(\"Local\", Jt_i, Jt_j, Gl_M_Fr)\r\n        V_n, M_n = End_Forces(Jt_i, Jt_j, Mbr_UDL)\r\n        Lc_Jt_F = [0.0, V_n, M_n, 0.0, V_n, -M_n]\r\n        Lc_F_r = [] \r\n        for p in range(0,len(Lc_M_F)): Mbr_List[j][ind_Int_F][p] += (Lc_M_F[p] + Lc_Jt_F[p])\r\n        #Reactions\r\n        Lc_F_r = Mbr_List[j][ind_Int_F]\r\n        Gl_F_r = Transform_Forces(\"Global\", Jt_i, Jt_j, Lc_F_r)\r\n        for i in range(0,len(Lc_F_r)): \r\n            if i > 2: Jt_List[ind_j][ind_React][i-DOF] += Gl_F_r[i]\r\n            else: Jt_List[ind_i][ind_React][i] += Gl_F_r[i]\r\n    return Mbr_List, Inv_K, Gl_K_mod, Gl_D, Gl_F\r\n\r\n\r\ndef Frame_Draw(Action, Jt_List, Mbr_List, Force_Scale, Draw_Data):\r\n    ind_Name, ind_Res, ind_Jt, ind_Force, ind_React = 0, 1, 2, 3, 4; DOF = 3\r\n    Jt_Lib = []; X_Store, Z_Store = [], [] #Y_Store = []\r\n    for i in range(0,len(Jt_List)):\r\n        Jt_Name = Jt_List[i][ind_Name]\r\n        Coord = Jt_List[i][ind_Jt]\r\n        Jt_Lib += [Jt_List[i][ind_Name]]\r\n        X_Store += [Coord[0]] #Y_Store += [Coord[1]]\r\n        Z_Store += [Coord[2]]\r\n    X_min, X_max, Z_min, Z_max = min(X_Store), max(X_Store), min(Z_Store), max(Z_Store)\r\n    d_X = X_max - X_min \r\n    d_Z = Z_max - Z_min  \r\n    if Action == \"Initial\":\r\n        #Titles\r\n        Title_List = [\"Model & Dimensions:\", \"Reactions & Deformation:\", \"Axial Force Diagram (AFD):\", \"Shear Force Diagram (SFD):\", \"Bending Moment Diagram (BMD):\"]\r\n        Draw_ind_List = [\"Dimensions\", \"Reactions\", \"Internal Forces\", \"Internal Forces\", \"Internal Forces\"]\r\n        Name_ind_List = [\"Model\", \"Reaction\", \"AFD\", \"SFD\", \"BMD\"]\r\n        for p in range(0,len(Title_List)):\r\n            Jt_m = [0, 0, Z_min + d_Z + 5000 - Text_Size * p]\r\n            MText = Title_List[p]\r\n            Text_Info = [Jt_m, MText, Draw_ind_List[p]]\r\n            Draw_Text(Name_ind_List[p], \"Title\", Text_Info, Draw_Data)\r\n        #Model X & Z Dimensions\r\n        Colour = \"Violet\"; Gap = 500; Leader = 500; Ext = 250; Arrow_Size = 250\r\n        Draw_Type = \"Dimensions\"\r\n        Dim_Info = Draw_Type, Colour, Gap, Leader, Ext, Arrow_Size\r\n        X_Set = sorted(set(X_Store))\r\n        Z_Set = sorted(set(Z_Store))\r\n        for i in range(0,len(X_Set)-1): #Dimension in X\r\n            Jt_i = [X_Set[i], 0, Z_Set[0]]\r\n            Jt_j = [X_Set[i+1], 0, Z_Set[0]]\r\n            Draw_Dimension(Jt_i, Jt_j, Dim_Info, Draw_Data)\r\n        for j in range(0,len(Z_Set)-1): #Dimension in Z\r\n            Jt_i = [X_Set[0], 0, Z_Set[j]]\r\n            Jt_j = [X_Set[0], 0, Z_Set[j+1]]\r\n            Draw_Dimension(Jt_i, Jt_j, Dim_Info, Draw_Data)\r\n        #Draw Joints and Joint Loads\r\n        for i in range(0,len(Jt_List)): #Joints\r\n            Jt_Name, Restraint, Coord, Forces = Jt_List[i]\r\n            Colour = \"Black\"; Supp_Size = 250; Jt_0 = Coord\r\n            Draw_Info = [Jt_Name, Colour, Supp_Size, Restraint]\r\n            Draw_Support(\"Model\", Jt_0, Draw_Info, Draw_Data)\r\n            Colour = \"Blue\"; Force_Dir = \"L\"\r\n            if Coord[0] > (X_min + d_X/2.0): Force_Dir = \"R\"\r\n            Draw_Info = [Jt_Name, Colour, Coord, Forces, Arrow_Size, Force_Dir]\r\n            Ansys_Loads(\"Model Joint\", Draw_Info, Draw_Data)\r\n        #Draw Frame Members and Frame Loads\r\n        for j in range(0,len(Mbr_List)): #Frames\r\n            Mbr_Name, Name_i, Name_j, Mbr_UDL, Mat_Prop = Mbr_List[j]\r\n            Colour = \"Black\"; Cyl_Rad = 100\r\n            ind_i = Jt_Lib.index(Name_i); Jt_1 = Jt_List[ind_i][ind_Jt]\r\n            ind_j = Jt_Lib.index(Name_j); Jt_2 = Jt_List[ind_j][ind_Jt]\r\n            Member_Info = [Mbr_Name, Colour, Cyl_Rad, Jt_1, Jt_2]\r\n            Frame_Member(\"Model\", Member_Info, Draw_Data) #Allow for Model option, 3D\r\n            Colour = \"Blue\"\r\n            Draw_Info = [Mbr_Name, Colour, Jt_1, Jt_2, Mbr_UDL, Arrow_Size]\r\n            Ansys_Loads(\"Model Member\", Draw_Info, Draw_Data)\r\n    elif Action == \"Results\":\r\n        #Draw Reaction\r\n        for i in range(0,len(Jt_List)):\r\n            Arrow_Size = 250\r\n            Jt_Name, Restraint, Coord, Forces, Reaction, Defl = Jt_List[i]\r\n            Colour = \"Red\"\r\n            React_Dir = \"L\"\r\n            if Coord[0] > (X_min + d_X/2.0): React_Dir = \"R\"\r\n            Draw_Info = [Jt_Name, Colour, Coord, Reaction, Defl, Restraint, Arrow_Size, React_Dir]\r\n            Ansys_Loads(\"Model Reaction\", Draw_Info, Draw_Data)\r\n        #Draw Axial Force Diagram, Shear Force Diagram, Bending Moment Diagram\r\n        for j in range(0,len(Mbr_List)):\r\n            Mbr_Name, Name_i, Name_j, Mbr_UDL, Mat_Prop, Mbr_Forces = Mbr_List[j]\r\n            ind_i = Jt_Lib.index(Name_i); Jt_1 = Jt_List[ind_i][ind_Jt]\r\n            ind_j = Jt_Lib.index(Name_j); Jt_2 = Jt_List[ind_j][ind_Jt]\r\n            Draw_Info = [Mbr_Name, Mbr_UDL, Mbr_Forces, Force_Scale]\r\n            Ansys_Internal_Forces(\"Model Axial\", Jt_1, Jt_2, Draw_Info, Draw_Data)\r\n            Ansys_Internal_Forces(\"Model Shear\", Jt_1, Jt_2, Draw_Info, Draw_Data)\r\n            Ansys_Internal_Forces(\"Model Bending\", Jt_1, Jt_2, Draw_Info, Draw_Data)\r\n\r\n############################## Structural Analysis Functions ########################################\r\n\r\ndef Transform_Forces(Action, Jt_i, Jt_j, Force_Matrix):\r\n    if Action == \"Global\": Angle_B = Plane_Angle(Jt_i, Jt_j)\r\n    else: Angle_B = -Plane_Angle(Jt_i, Jt_j)\r\n    P_i, V_i, M_i, P_j, V_j, M_j = Force_Matrix\r\n    TP_i, Dummy, TV_i = Plane_Rot(P_i, 0, V_i, Angle_B)\r\n    TP_j, Dummy, TV_j = Plane_Rot(P_j, 0, V_j, Angle_B)  \r\n    Output = [TP_i, TV_i, M_i, TP_j, TV_j, M_j]\r\n    return Output\r\n\r\ndef End_Forces(Jt_i, Jt_j, Mbr_UDL):        \r\n    Len = Dist(Jt_i, Jt_j)\r\n    V_n = Mbr_UDL * Len / 2.0 / 1000 #in kN\r\n    M_n = Mbr_UDL * Len**2 / 12.0 / 1000**2 #in kNm\r\n    return V_n, M_n\r\n    \r\ndef Plane_K(Jt_i, Jt_j, Mat_Prop): #Stiffness Matrix, XZ Plane\r\n    E_m, A_m, I_m = Mat_Prop #in MPa, mm2, mm4\r\n    L_m = Dist(Jt_i, Jt_j) #in mm\r\n    E_m = E_m*1.0 * 1000 #MPa to kPa\r\n    A_m = A_m*1.0 / 1000**2 #to m2\r\n    I_m = I_m*1.0 / 1000**4 #to m4\r\n    L_m = L_m*1.0 / 1000 #to m\r\n    Angle_B = Plane_Angle(Jt_i, Jt_j)\r\n    n_ix = math.cos(Angle_B) \r\n    n_iy = math.sin(Angle_B)\r\n    n_jx = math.cos(Angle_B)\r\n    n_jy = math.sin(Angle_B)\r\n\r\n    P_cf = (1.0 * A_m * E_m) / L_m\r\n    V_cf = (12.0 * E_m * I_m) / (L_m**3)\r\n    M_cf = (6.0 * E_m * I_m) / (L_m**2)\r\n    R_cf = (2.0 * E_m * I_m) / L_m\r\n    \r\n    PiPi =  P_cf*n_ix**2   + V_cf*n_iy**2\r\n    PiVi =  P_cf*n_ix*n_iy - V_cf*n_ix*n_iy\r\n    PiMi = -M_cf*n_iy\r\n    PiPj = -P_cf*n_ix*n_jx - V_cf*n_iy*n_jy\r\n    PiVj = -P_cf*n_ix*n_jy + V_cf*n_iy*n_jx\r\n    PiMj = -M_cf*n_iy\r\n    \r\n    ViPi =  P_cf*n_ix*n_iy - V_cf*n_ix*n_iy\r\n    ViVi =  P_cf*n_iy**2   + V_cf*n_ix**2\r\n    ViMi =  M_cf*n_ix\r\n    ViPj = -P_cf*n_iy*n_jx + V_cf*n_ix*n_jy\r\n    ViVj = -P_cf*n_iy*n_jy - V_cf*n_ix*n_jx\r\n    ViMj =  M_cf*n_ix\r\n    \r\n    MiPi = -M_cf*n_iy\r\n    MiVi =  M_cf*n_ix\r\n    MiMi =  2.0*R_cf\r\n    MiPj =  M_cf*n_jy\r\n    MiVj = -M_cf*n_jx\r\n    MiMj =  R_cf\r\n    \r\n    PjPi = -P_cf*n_ix*n_jx - V_cf*n_iy*n_jy\r\n    PjVi = -P_cf*n_iy*n_jx + V_cf*n_ix*n_jy\r\n    PjMi =  M_cf*n_jy\r\n    PjPj =  P_cf*n_jx**2   + V_cf*n_jy**2\r\n    PjVj =  P_cf*n_jx*n_jy - V_cf*n_jx*n_jy\r\n    PjMj =  M_cf*n_jy\r\n    \r\n    VjPi = -P_cf*n_ix*n_jy + V_cf*n_iy*n_jx\r\n    VjVi = -P_cf*n_iy*n_jy - V_cf*n_ix*n_jx\r\n    VjMi = -M_cf*n_jx\r\n    VjPj =  P_cf*n_jx*n_jy - V_cf*n_jx*n_jy\r\n    VjVj =  P_cf*n_jy**2   + V_cf*n_jx**2\r\n    VjMj = -M_cf*n_jx\r\n    \r\n    MjPi = -M_cf*n_iy\r\n    MjVi =  M_cf*n_ix\r\n    MjMi =  R_cf\r\n    MjPj =  M_cf*n_jy\r\n    MjVj = -M_cf*n_jx\r\n    MjMj =  2.0*R_cf\r\n\r\n    Pi_ij = [PiPi, PiVi, PiMi, PiPj, PiVj, PiMj]\r\n    Vi_ij = [ViPi, ViVi, ViMi, ViPj, ViVj, ViMj]\r\n    Mi_ij = [MiPi, MiVi, MiMi, MiPj, MiVj, MiMj]\r\n    Pj_ij = [PjPi, PjVi, PjMi, PjPj, PjVj, PjMj]\r\n    Vj_ij = [VjPi, VjVi, VjMi, VjPj, VjVj, VjMj]\r\n    Mj_ij = [MjPi, MjVi, MjMi, MjPj, MjVj, MjMj]\r\n     \r\n    K_Matrix = [Pi_ij, Vi_ij, Mi_ij, Pj_ij, Vj_ij, Mj_ij] #Units in kN, m\r\n    return K_Matrix\r\n\r\n\r\ndef Matrix_Mult(M1, M2):\r\n    M3 = [[0 for j in range(0,len(M2[0]))] for i in range(0,len(M1))] \r\n    for i in range(0,len(M3)):\r\n        for j in range(0,len(M3[i])):\r\n            Val_M3 = 0\r\n            for p in range(0,len(M1[0])):\r\n                Val_M1 = M1[i][p]\r\n                Val_M2 = M2[p][j]\r\n                Val_M3 += Val_M1 * Val_M2\r\n            M3[i][j] = Val_M3\r\n    return M3\r\n\r\n\r\ndef Matrix_Inv_Tri(Type, M):\r\n    M_r = [[0 for j in range(0,len(M[i])*2)] for i in range(0,len(M))]\r\n    for i in range(0,len(M)): \r\n        M_r[i][len(M)+i] = 1.0\r\n        for j in range(0,len(M[i])): M_r[i][j] = M[i][j]\r\n    if Type == \"Upper\": \r\n        for i in range(0,len(M_r)): \r\n            ind = len(M_r)-1-i; Coeff = 1.0*M_r[ind][ind]\r\n            for j in range(0,len(M_r[i])): M_r[ind][j] = M_r[ind][j] / Coeff\r\n            for p in range(0,i):\r\n                ind_n = ind+p+1; Coeff = 1.0*M_r[ind][ind_n]\r\n                for q in range(0,len(M_r[ind])): M_r[ind][q] -= Coeff * M_r[ind_n][q]\r\n    elif Type == \"Lower\":\r\n        for i in range(0,len(M_r)): \r\n            Coeff = 1.0*M_r[i][i]\r\n            for j in range(0,len(M_r[i])): M_r[i][j] = M_r[i][j] / Coeff\r\n            for p in range(0,i):\r\n                ind_n = i-p-1; Coeff = 1.0*M_r[i][ind_n]\r\n                for q in range(0,len(M_r[i])): M_r[i][q] -= Coeff * M_r[ind_n][q]\r\n    M_inv = [[0 for j in range(0,len(M[i]))] for i in range(0,len(M))]\r\n    for i in range(0,len(M)): \r\n        for j in range(0,len(M[i])): M_inv[i][j] = M_r[i][j+len(M)]\r\n    return M_inv \r\n\r\n\r\ndef Matrix_Inv_LU(M):\r\n    L_r = [[0 for j in range(0,len(M[i]))] for i in range(0,len(M))]\r\n    U_r = [[0 for j in range(0,len(M[i]))] for i in range(0,len(M))]\r\n    for i in range(0,len(M)): \r\n        U_r[0][i] = M[0][i]\r\n        for j in range(0,len(M[i])): \r\n            if i == j: L_r[i][j] = 1.0\r\n            elif j == 0: L_r[i][j] = M[i][j] / U_r[0][0]\r\n    for i in range(1,len(M)):\r\n        for j in range(0,len(M[i])):\r\n            if j >= i: \r\n                U_0 = 0\r\n                for p in range(0,i): U_0 += L_r[i][0+p] * U_r[0+p][j]\r\n                U_r[i][j] = M[i][j] - U_0 \r\n            if j < i and j > 0:\r\n                L_0 = 0\r\n                for q in range(0,j): L_0 += L_r[i][0+q] * U_r[0+q][j]\r\n                L_r[i][j] = (M[i][j] - L_0) / U_r[j][j]\r\n    U_inv = Matrix_Inv_Tri(\"Upper\", U_r)\r\n    L_inv = Matrix_Inv_Tri(\"Lower\", L_r) \r\n    M_inv = Matrix_Mult(U_inv, L_inv)\r\n    Output = M_inv\r\n    return Output\r\n\r\n############################## Spatial Manipulations ########################################\r\ndef Joint(Action, Input): \r\n    if Action == \"Add\":\r\n        Jt_n = Input[0]; d_Jts = Input[1:]; Jt_m = Jt_n; Jt_p = []\r\n        for i in range(0,len(d_Jts)):\r\n            Jt_p = [Jt_m[0] + d_Jts[i][0], Jt_m[1] + d_Jts[i][1], Jt_m[2] + d_Jts[i][2]]\r\n            Jt_m = Jt_p\r\n        return Jt_m\r\n    elif Action == \"Average\":\r\n        Jts = Input; Jt_X, Jt_Y, Jt_Z = [], [], []\r\n        for i in range(0,len(Jts)): \r\n            Jt_X += [Jts[i][0]*1.0]; Jt_Y += [Jts[i][1]*1.0]; Jt_Z += [Jts[i][2]*1.0]\r\n        Jt_Avg = [sum(Jt_X)/len(Jt_X), sum(Jt_Y)/len(Jt_Y), sum(Jt_Z)/len(Jt_Z)]\r\n        return Jt_Avg\r\n    elif Action == \"Difference\":\r\n        Jt_j, Jt_i = Input\r\n        Jt_n = [Jt_j[0] - Jt_i[0], Jt_j[1] - Jt_i[1], Jt_j[2] - Jt_i[2]]\r\n        return Jt_n\r\n\r\ndef Dist(Cd_i, Cd_j): #Distance between two joints\r\n    X_i, Y_i, Z_i = Cd_i; X_j, Y_j, Z_j = Cd_j\r\n    Length = math.sqrt((X_i*1.0 - X_j*1.0)**2 + (Y_i*1.0 - Y_j*1.0)**2 + (Z_i*1.0 - Z_j*1.0)**2)\r\n    return Length\r\n\r\ndef Intp(X_n, X_0, X_1, Y_0, Y_1): #Linear interpolation\r\n    Y_n = (Y_0 * (X_1 - X_n) + Y_1 * (X_n - X_0)) / (X_1 - X_0)\r\n    return Y_n\r\n\r\ndef Plane_Rot(dX, dY, dZ, A): #Local Coordinates XZ, returns XYZ (dY=0, Y=0)\r\n    dX_0 = dX*1.0*math.cos(A) - dZ*1.0*math.sin(A)\r\n    dZ_0 = dX*1.0*math.sin(A) + dZ*1.0*math.cos(A)\r\n    return [dX_0, 0, dZ_0]\r\n\r\ndef Plane_Angle(Cd_i, Cd_j): #Angle on XZ plane\r\n    X_i, Y_i, Z_i = Cd_i; X_j, Y_j, Z_j = Cd_j\r\n    d_X, d_Z = (X_j - X_i)*1.0, (Z_j - Z_i)*1.0\r\n    if d_X == 0 and d_Z >= 0: Angle_A = math.pi/2\r\n    elif d_X == 0 and d_Z < 0: Angle_A = 3*math.pi/2\r\n    elif d_X > 0 and d_Z >= 0: Angle_A = math.atan(d_Z/d_X)\r\n    elif d_X > 0 and d_Z < 0: Angle_A = 2*math.pi + math.atan(d_Z/d_X)\r\n    else: Angle_A = math.pi + math.atan(d_Z/d_X)\r\n    Angle_Output = (Angle_A * 180/math.pi % 360) * math.pi/180\r\n    return Angle_Output\r\n\r\n\r\n############################## Drawing Functions ########################################\r\ndef Draw_Arrow(Jt_i, Jt_j, Arrow_Size): #Jt_a at object, Jt_b away\r\n    Angle_B = Plane_Angle(Jt_i, Jt_j)\r\n    Arrow_Dp = Arrow_Size / 3.0\r\n    d_Zp = Plane_Rot(-Arrow_Size, 0.0, Arrow_Dp, Angle_B)\r\n    d_Zn = Plane_Rot(-Arrow_Size, 0.0, -Arrow_Dp, Angle_B)\r\n    Jt_a = Joint(\"Add\", [Jt_j, d_Zp])\r\n    Jt_b = Joint(\"Add\", [Jt_j, d_Zn])\r\n    return Jt_a, Jt_b\r\n\r\n\r\ndef Draw_Arc(Jt_0, Rad, Segments = 24, Start_0 = 0, Rot_0 = math.pi):\r\n    Jts = []\r\n    d_0 = Rot_0*1.0 / Segments\r\n    for i in range(0,Segments+1):\r\n        Angle = Start_0 + d_0 * i\r\n        Jt_n = Plane_Rot(Rad * math.cos(Angle), 0.0, Rad * math.sin(Angle), 0.0)\r\n        Jt_i = Joint(\"Add\", [Jt_0, Jt_n])\r\n        Jts += [Jt_i]\r\n    return Jts\r\n\r\n\r\ndef Draw_Dimension(Jt_i, Jt_j, Dim_Info, Draw_Data):\r\n    Angle_B = Plane_Angle(Jt_i, Jt_j)\r\n    Draw_ind, Colour, Gap, Leader, Ext, Arrow_Size = Dim_Info\r\n    r = Draw_Ref.index(Draw_ind)\r\n    Action = \"Model\"\r\n    Type = \"Line\"\r\n    Name = \"Dimensions\"\r\n    Cyl_Rad = \"NA\"\r\n    if abs(Angle_B) <= d0_Tol or abs(Angle_B - math.pi) <= d0_Tol: Sign = -1.0\r\n    else: Sign = 1.0\r\n    d_H1 = Plane_Rot(0.0, 0.0, Sign * Gap, Angle_B)\r\n    d_H2 = Plane_Rot(0.0, 0.0, Sign * (Gap + Leader), Angle_B)\r\n    d_H3 = Plane_Rot(0.0, 0.0, Sign * (Gap + Leader + Ext), Angle_B)\r\n    Jt_i1 = Joint(\"Add\", [Jt_i, d_H1])\r\n    Jt_i2 = Joint(\"Add\", [Jt_i, d_H2])\r\n    Jt_i3 = Joint(\"Add\", [Jt_i, d_H3])\r\n    Jt_j1 = Joint(\"Add\", [Jt_j, d_H1])\r\n    Jt_j2 = Joint(\"Add\", [Jt_j, d_H2])\r\n    Jt_j3 = Joint(\"Add\", [Jt_j, d_H3])\r\n    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i1, Jt_i2]; Draw_Data[r] += [Draw_Info]\r\n    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i2, Jt_i3]; Draw_Data[r] += [Draw_Info]\r\n    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_j1, Jt_j2]; Draw_Data[r] += [Draw_Info]\r\n    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_j2, Jt_j3]; Draw_Data[r] += [Draw_Info]\r\n    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i2, Jt_j2]; Draw_Data[r] += [Draw_Info]\r\n    Jt_a, Jt_b = Draw_Arrow(Jt_i2, Jt_j2, Arrow_Size)\r\n    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_a, Jt_j2]; Draw_Data[r] += [Draw_Info]\r\n    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_b, Jt_j2]; Draw_Data[r] += [Draw_Info]\r\n    Jt_a, Jt_b = Draw_Arrow(Jt_j2, Jt_i2, Arrow_Size)\r\n    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_a, Jt_i2]; Draw_Data[r] += [Draw_Info]\r\n    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_b, Jt_i2]; Draw_Data[r] += [Draw_Info]\r\n    MText = str(int(Dist(Jt_i2, Jt_j2)))\r\n    Jt_m = Joint(\"Average\", [Jt_i2, Jt_j2])\r\n    if Angle_B <> 0: d_Text = [-2*Text_Shift_r*len(MText)*Text_Size, 0, 0]\r\n    else: d_Text = [-Text_Shift_r*len(MText)*Text_Size, 0, 0]\r\n    Jt_mr = Joint(\"Add\", [Jt_m, d_Text])\r\n    Text_Info = Jt_mr, MText, Draw_ind\r\n    Draw_Text(Action, \"Dimensions\", Text_Info, Draw_Data)\r\n\r\n\r\ndef Draw_Text(Action, Type, Text_Info, Draw_Data):\r\n    Jt_m, MText, Draw_ind = Text_Info\r\n    r = Draw_Ref.index(Draw_ind)\r\n    Shift_X = -len(MText) * Text_Shift_r * Text_Size #Default centre\r\n    Shift_Y = 0; Shift_Z = 0\r\n    Name_Type = Type\r\n    if Type == \"Title\": Name_Type = Action; Shift_X = 0\r\n    elif Type == \"Member Load\": Shift_Z += 1.0 * Text_Size\r\n    elif Type == \"Joint Name\": MText = \"[\" + MText + \"]\"; Shift_X += 1.0 * Text_Size; Shift_Z += 1.0 * Text_Size\r\n    elif Type == \"Member Name V\": Shift_X = 0\r\n    elif Type == \"Member Name H\": Shift_X += Text_Size; Shift_Z += 1.5 * Text_Size\r\n    elif Type == \"BMD Max\": Name_Type = Type[:3]\r\n    elif Type == \"Result\": Shift_X = 0\r\n    elif Type == \"Applied Force\": Shift_X = Text_Size / 2.0; Shift_Z = Text_Size / 2.0\r\n    elif Type == \"Applied Moment\": Shift_Z = -Text_Size\r\n    elif Type == \"Dimensions\": Shift_X = 0\r\n    elif Type in [\"AFD i -\", \"SFD i -\", \"BMD i -\"]:\r\n        Name_Type = Type[:3]\r\n        Shift_X = Text_Size / 2.0\r\n        Shift_Z += -0.5 * Text_Size\r\n    elif Type in [\"AFD i +\", \"SFD i +\", \"BMD i +\"]:\r\n        Name_Type = Type[:3]\r\n        Shift_X = Text_Size / 2.0\r\n        Shift_Z += 0.5 * Text_Size\r\n    elif Type in [\"AFD j -\", \"SFD j -\", \"BMD j -\"]:\r\n        Name_Type = Type[:3]\r\n        Shift_X = -2 * len(MText) * Text_Shift_r * Text_Size\r\n        Shift_Z += -0.5 * Text_Size\r\n    elif Type in [\"AFD j +\", \"SFD j +\", \"BMD j +\"]:\r\n        Name_Type = Type[:3]\r\n        Shift_X = -2 * len(MText) * Text_Shift_r * Text_Size\r\n        Shift_Z += 0.5 * Text_Size\r\n    d_Jt_t = [Shift_X, Shift_Y, Shift_Z]\r\n    d_Jt_D = [0, 0, -Dynamo_Offset]\r\n    Jt_t = Joint(\"Add\", [Jt_m, d_Jt_t])\r\n    Jt_D = Joint(\"Add\", [Jt_t, d_Jt_D])\r\n    Draw_Info = [\"Text\", Name_Type, MText, Jt_t, Jt_D]; Draw_Data[r] += [Draw_Info]\r\n\r\n\r\ndef Draw_Support(Action, Jt_0, Draw_Info, Draw_Data):\r\n    Draw_ind = \"Framing\"\r\n    Name_ind = \"Dimensions\"\r\n    r = Draw_Ref.index(Draw_ind)\r\n    Name, Colour, Size, Restraint = Draw_Info\r\n    MText = str(Name)\r\n    Text_Info = [Jt_0, MText, Name_ind]\r\n    Draw_Text(Action, \"Joint Name\", Text_Info, Draw_Data)\r\n    Cyl_Rad = \"NA\"\r\n    Solid_Colour = \"Orange\"\r\n    Draw_Info = [\"Sphere\", Name, Solid_Colour, Sphere_Rad, Jt_0]; Draw_Data[r] += [Draw_Info]\r\n    if Restraint == [\"R\", \"R\", \"R\"]: #Fixed\r\n        d_Xn = [-Size, 0, -Size/2.0]\r\n        d_Xp = [Size, 0, -Size/2.0]\r\n        Jt_1 = Joint(\"Add\", [Jt_0, d_Xn])\r\n        Jt_2 = Joint(\"Add\", [Jt_0, d_Xp])\r\n        Type = \"Line\"\r\n        Colour = \"Black\"\r\n        Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_1, Jt_2]; Draw_Data[r] += [Draw_Info]\r\n        Jt_12 = Joint(\"Average\", [Jt_1, Jt_2])\r\n        Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_0, Jt_12]; Draw_Data[r] += [Draw_Info]\r\n    elif Restraint == [\"R\", \"R\", \"F\"] or Restraint == [\"F\", \"R\", \"F\"]: #Pinned, Roller\r\n        d_Jtn = [-Size, 0, -Size]\r\n        d_Jtp = [Size, 0, -Size]\r\n        Jt_1 = Joint(\"Add\", [Jt_0, d_Jtn])\r\n        Jt_2 = Joint(\"Add\", [Jt_0, d_Jtp])\r\n        Type = \"Line\"\r\n        Colour = \"Black\"\r\n        Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_1, Jt_2]; Draw_Data[r] += [Draw_Info]\r\n        Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_0, Jt_1]; Draw_Data[r] += [Draw_Info]\r\n        Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_0, Jt_2]; Draw_Data[r] += [Draw_Info]\r\n        Jt_0a = Joint(\"Average\", [Jt_1, Jt_2])\r\n        Jt_1a = Joint(\"Average\", [Jt_0a, Jt_1])\r\n        Jt_2a = Joint(\"Average\", [Jt_0a, Jt_2])\r\n        if Restraint == [\"F\", \"R\", \"F\"]:\r\n            Type = \"Circle\"\r\n            Colour = \"Black\"\r\n            Circle_Rad = Size/4.0\r\n            Dir = [0, 1, 0]\r\n            Jt_ref = [Jt_1a, Jt_2a]\r\n            for i in range(0,2):\r\n                d_Z = [0.0, 0.0, -Circle_Rad]\r\n                Jt_c = Joint(\"Add\", [Jt_ref[i], d_Z])\r\n                Draw_Info = [Type, Name, Colour, Circle_Rad, Dir, Jt_c]; Draw_Data[r] += [Draw_Info]  \r\n    if Restraint == [\"R\", \"R\", \"R\"] or Restraint == [\"R\", \"R\", \"F\"]: #Pinned\r\n        Type = \"Line\"\r\n        Segments = 4\r\n        d_L = 1.0*Dist(Jt_1, Jt_2) / Segments\r\n        d_S = [-d_L*2.0/3, 0, -d_L*2.0/3]  \r\n        for i in range(0,Segments):\r\n            d_Jt_1 = [d_L*i, 0, 0]\r\n            d_Jt_2 = [d_L*(i+1), 0, 0]\r\n            Jt_1b = Joint(\"Add\", [Jt_1, d_Jt_1])\r\n            Jt_2b = Joint(\"Add\", [Jt_1, d_Jt_2])\r\n            Jt_12 = Joint(\"Average\", [Jt_1b, Jt_2b])\r\n            Jt_23 = Joint(\"Add\", [Jt_12, d_S])\r\n            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_12, Jt_23]; Draw_Data[r] += [Draw_Info]\r\n\r\n\r\ndef Ansys_UDL(Jt_1, Jt_2, Size, Segments = 10):\r\n    Angle_B = Plane_Angle(Jt_1, Jt_2)\r\n    d_Zi = Size + Text_Size\r\n    d_Jt_Z = Plane_Rot(0.0, 0.0, d_Zi, Angle_B)\r\n    Jt_1r = Joint(\"Add\", [Jt_1, d_Jt_Z])\r\n    Jt_2r = Joint(\"Add\", [Jt_2, d_Jt_Z])\r\n    d_L = Dist(Jt_1r, Jt_2r) * 1.0 / Segments\r\n    Jts = []\r\n    for i in range(0,Segments+1):\r\n        d_Jt_Li = Plane_Rot(d_L * i, 0.0, 0.0, Angle_B)\r\n        d_Jt_Lj = Plane_Rot(d_L * i, 0.0, -Size, Angle_B)\r\n        Jt_i = Joint(\"Add\", [Jt_1r, d_Jt_Li])\r\n        Jt_j = Joint(\"Add\", [Jt_1r, d_Jt_Lj])\r\n        Jts += [[Jt_i, Jt_j]]\r\n    return Jts\r\n\r\n\r\ndef Ansys_Loads(Action, Draw_Info, Draw_Data):\r\n    if Action == \"Model Reaction\": r = Draw_ind = \"Reactions\"; Text_Action = \"Model\"\r\n    else: Draw_ind = \"Applied Loads\"; Text_Action = \"Model\"\r\n    r = Draw_Ref.index(Draw_ind)\r\n    Cyl_Rad = \"NA\"; Type = \"Line\"\r\n    if Action in [\"Model Member\"]:\r\n        Name, Colour, Jt_1, Jt_2, Mbr_UDL, Arrow_Size = Draw_Info\r\n        Shift = Arrow_Size; Arrow_Len = Arrow_Size * 2.5; Arrow_Head = Arrow_Size\r\n        if Mbr_UDL <> 0:\r\n            Segments = 10\r\n            UDL_Size = Arrow_Len\r\n            Jts = Ansys_UDL(Jt_1, Jt_2, UDL_Size, Segments)\r\n            Jt_i, Jt_j = Jts[0][0], Jts[-1][0]\r\n            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n            Jt_m = Joint(\"Average\", [Jt_i, Jt_j])\r\n            MText = str(round(Mbr_UDL,2)) + \" kN/m\"\r\n            Text_Info = [Jt_m, MText, Draw_ind]\r\n            Draw_Text(Text_Action, \"Member Load\", Text_Info, Draw_Data)\r\n            for i in range(0,len(Jts)): #Jt_i, Jt_j = Jts[i]\r\n                if Mbr_UDL > 0: Jt_i, Jt_j = Jts[i]\r\n                else: Jt_j, Jt_i = Jts[i]\r\n                Jt_a, Jt_b = Draw_Arrow(Jt_i, Jt_j, Arrow_Head)\r\n                Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n                Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_a, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n                Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_b, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n    elif Action in [\"Model Joint\", \"Model Reaction\"]:\r\n        if Action == \"Model Joint\": \r\n            Name, Colour, Coord, Forces, Arrow_Size, Draw_Dir = Draw_Info\r\n            Restraint = [\"R\", \"R\", \"R\"] #Dummy\r\n            Start_0 = math.pi/4\r\n            Rot_0 = math.pi\r\n            Shift = Arrow_Size\r\n            Arrow_Len = Arrow_Size * 5.0\r\n            Arrow_Head = Arrow_Size\r\n        elif Action == \"Model Reaction\":\r\n            Name, Colour, Coord, Reaction, Defl, Restraint, Arrow_Size, Draw_Dir = Draw_Info\r\n            Forces = Reaction\r\n            if Reaction[-1] > 0: Start_0 = math.pi/2; Rot_0 = math.pi\r\n            else: Start_0 = math.pi/2; Rot_0 = -math.pi #* 5.0/4\r\n            Shift = Arrow_Size\r\n            Arrow_Len = Arrow_Size * 5.0\r\n            Arrow_Head = Arrow_Size\r\n            MText_List = [] #Reaction/Defl Text\r\n            for i in range(0,3):\r\n                if Restraint[i] == \"F\":\r\n                    if i == 0: MText = \"dx = \" + str(round(Defl[i]*1000,2)) + \" mm\"\r\n                    elif i == 1: MText = \"dy = \" + str(round(Defl[i]*1000,2)) + \" mm\"\r\n                    elif i == 2: MText = \"dr = \" + str(round(Defl[i]*1000,3)) + \" rad\"\r\n                    MText_List += [MText]\r\n                else:\r\n                    if i == 0: MText = \"Rx = \" + str(round(Reaction[i],1)) + \" kN\"\r\n                    elif i == 1: MText = \"Ry = \" + str(round(Reaction[i],1)) + \" kN\"\r\n                    elif i == 2: MText = \"M = \" + str(round(Reaction[i],1)) + \" kNm\" \r\n                    MText_List += [MText]\r\n            for i in range(0,3):\r\n                d_Jt_m = [Text_Size/2.0, 0, -Text_Size * (i+0.5)]\r\n                if \"R\" in Restraint and Draw_Dir == \"L\": d_Jt_m = [-(len(MText_List[-1])) *2* Text_Shift_r * Text_Size, 0, -Text_Size * (i+1)]\r\n                elif \"R\" in Restraint and Draw_Dir == \"R\": d_Jt_m = [Text_Size, 0, -Text_Size * (i+1)]     \r\n                Jt_m = Joint(\"Add\", [Coord, d_Jt_m])\r\n                MText = MText_List[i]\r\n                Text_Info = [Jt_m, MText, Draw_ind]\r\n                Draw_Text(Text_Action, \"Result\", Text_Info, Draw_Data)\r\n        for i in range(0,3):\r\n            if Forces[i] <> 0 and Restraint[i] == \"R\":\r\n                if i == 2:\r\n                    Rad = 500\r\n                    Segments = 24 #10\r\n                    Jts = Draw_Arc(Coord, Rad, Segments, Start_0, Rot_0)\r\n                    if \"Joint\" in Action:\r\n                        MText = str(round(Forces[i],2)) + \" kNm\"\r\n                        Text_Info = [Jt_m, MText, Draw_ind]\r\n                        Draw_Text(Text_Action, \"Applied Moment\", Text_Info, Draw_Data)\r\n                    for j in range(0,len(Jts)-1):\r\n                        Jt_i, Jt_j = Jts[j], Jts[j+1]\r\n                        Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n                        if j == 0:\r\n                            Jt_a, Jt_b = Draw_Arrow(Jt_j, Jt_i, Arrow_Head)\r\n                            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_a, Jt_i]; Draw_Data[r] += [Draw_Info]\r\n                            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_b, Jt_i]; Draw_Data[r] += [Draw_Info]\r\n                else:\r\n                    if i == 0: \r\n                        if Draw_Dir == \"R\": L_1 = Shift; L_2 = Shift + Arrow_Len\r\n                        else: L_2 = -Shift; L_1 = -(Shift + Arrow_Len)\r\n                        d_1 = [L_1, 0, 0]; d_2 = [L_2, 0, 0]\r\n                    else: \r\n                        if \"Reaction\" in Action: L_2 = -Shift; L_1 = -(Shift + Arrow_Len)\r\n                        else: L_1 = Shift; L_2 = Shift + Arrow_Len \r\n                        d_1 = [0, 0, L_1]; d_2 = [0, 0, L_2]\r\n                    Jt_1 = Joint(\"Add\", [Coord, d_1])\r\n                    Jt_2 = Joint(\"Add\", [Coord, d_2])\r\n                    Jt_i = Jt_2; Jt_j = Jt_1\r\n                    if Forces[i] > 0: Jt_i = Jt_1; Jt_j = Jt_2\r\n                    Jt_a, Jt_b = Draw_Arrow(Jt_i, Jt_j, Arrow_Head)\r\n                    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n                    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_a, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n                    Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_b, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n                    if \"Joint\" in Action:\r\n                        MText = str(round(Forces[i],2)) + \" kN\"\r\n                        Jt_m = Jt_j #Calculate.Joint(\"Average\", [Jt_i, Jt_j])\r\n                        if Forces[i] < 0 or (Forces[i] > 0 and Draw_Dir == \"L\"): \r\n                            if i == 0: d_Jt_m = [-(len(MText)+1) * Text_Shift_r * Text_Size, 0, 0]\r\n                            else: d_Jt_m = [0,0,0]\r\n                            Jt_m = Joint(\"Add\", [Jt_i, d_Jt_m])\r\n                        Text_Info = [Jt_m, MText, Draw_ind]\r\n                        Draw_Text(Text_Action, \"Applied Force\", Text_Info, Draw_Data)\r\n                                \r\n                        \r\ndef Frame_Member(Action, Member_Info, Draw_Data, Mbr_Text = \"On\"):\r\n    Draw_ind = \"Framing\"; Name_ind = \"Dimensions\"\r\n    r = Draw_Ref.index(Draw_ind)\r\n    Mbr_Name, Colour, Cyl_Rad, Jt_1, Jt_2 = Member_Info\r\n    Angle_B = Plane_Angle(Jt_1, Jt_2)\r\n    Type = \"Line\"\r\n    Draw_Info = [Type, Mbr_Name, Colour, Cyl_Rad, Jt_1, Jt_2]; Draw_Data[r] += [Draw_Info]\r\n    Solid_Colour = \"Orange\"\r\n    Mbr_Dir = Joint(\"Difference\", [Jt_2, Jt_1])\r\n    d_Dp = Plane_Rot(0.0, 0.0, Dim_D/2.0, Angle_B)\r\n    d_Dn = Plane_Rot(0.0, 0.0, -Dim_D/2.0, Angle_B)  \r\n    d_Bp = [0.0, Dim_B/2.0, 0.0]\r\n    d_Bn = [0.0, -Dim_B/2.0, 0.0]\r\n    Jt_A = Joint(\"Add\", [Jt_1, d_Dp, d_Bp])\r\n    Jt_B = Joint(\"Add\", [Jt_1, d_Dp, d_Bn])\r\n    Jt_C = Joint(\"Add\", [Jt_1, d_Dn, d_Bn])\r\n    Jt_D = Joint(\"Add\", [Jt_1, d_Dn, d_Bp])\r\n    Mbr_Jts = [Jt_A, Jt_B, Jt_C, Jt_D]\r\n    Draw_Info = [\"Cuboid\", Mbr_Name, Solid_Colour, Mbr_Jts, Mbr_Dir]; Draw_Data[r] += [Draw_Info]\r\n    if Mbr_Text == \"On\":\r\n        if abs(Angle_B) <= d0_Tol or abs(Angle_B - math.pi) <= d0_Tol: Text_Type = \"Member Name H\"\r\n        else: Text_Type = \"Member Name V\"\r\n        Jt_m = Joint(\"Average\", [Jt_1, Jt_2])\r\n        MText = str(Mbr_Name)\r\n        Text_Info = [Jt_m, MText, Name_ind]\r\n        Draw_Text(Action, Text_Type, Text_Info, Draw_Data)\r\n         \r\n       \r\ndef Ansys_Internal_Forces(Action, Jt_i, Jt_j, Draw_Info, Draw_Data):\r\n    Mbr_Name, Mbr_UDL, Mbr_Forces, Force_Scale = Draw_Info\r\n    Draw_ind = \"Internal Forces\"; Text_Action = \"Model\"\r\n    r = Draw_Ref.index(Draw_ind)\r\n    Angle_B = Plane_Angle(Jt_i, Jt_j)\r\n    AFD_Sign = 1.0 \r\n    SFD_Sign = 1.0 \r\n    BMD_Sign = -1.0 #Plot Negative on +Z Axis\r\n    Def_Scale = 100.0\r\n    P_Scale, V_Scale, M_Scale = Force_Scale\r\n    GP_i, GV_i, GM_i, GP_j, GV_j, GM_j = Mbr_Forces\r\n    P_i = 1.0 * GP_i; P_j = -1.0 * GP_j; V_i = 1.0 * GV_i; V_j = -1.0 * GV_j; M_i = -1.0 * GM_i; M_j = 1.0 * GM_j\r\n    d_Pi = Plane_Rot(0.0, 0.0, AFD_Sign * P_i * P_Scale * Def_Scale, Angle_B)  \r\n    d_Vi = Plane_Rot(0.0, 0.0, SFD_Sign * V_i * V_Scale * Def_Scale, Angle_B)  \r\n    d_Mi = Plane_Rot(0.0, 0.0, BMD_Sign * M_i * M_Scale * Def_Scale, Angle_B)  \r\n    d_Pj = Plane_Rot(0.0, 0.0, AFD_Sign * P_j * P_Scale * Def_Scale, Angle_B)  \r\n    d_Vj = Plane_Rot(0.0, 0.0, SFD_Sign * V_j * V_Scale * Def_Scale, Angle_B)  \r\n    d_Mj = Plane_Rot(0.0, 0.0, BMD_Sign * M_j * M_Scale * Def_Scale, Angle_B) \r\n    Name = Mbr_Name\r\n    Cyl_Rad = \"NA\"\r\n    if Action == \"Model Axial\":\r\n        Type = \"AFD\"\r\n        Colour = \"Green\"\r\n        Jt_1 = Joint(\"Add\", [Jt_i, d_Pi])\r\n        Jt_2 = Joint(\"Add\", [Jt_j, d_Pj])\r\n        Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_1, Jt_2]; Draw_Data[r] += [Draw_Info]\r\n        if Dist(Jt_1, Jt_i) > dr_Tol: \r\n            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i, Jt_1]; Draw_Data[r] += [Draw_Info]\r\n            if P_i > 0: Text_Type = \"AFD i +\"\r\n            else: Text_Type = \"AFD i -\"\r\n            MText = str(round(P_i,2)) + \" kN\"\r\n            Text_Info = [Jt_1, MText, Draw_ind]\r\n            Draw_Text(Text_Action, Text_Type, Text_Info, Draw_Data)\r\n        if Dist(Jt_2, Jt_j) > dr_Tol: \r\n            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_2, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n            if abs(P_i - P_j) > dr_Tol:\r\n                if P_j > 0: Text_Type = \"AFD j +\"\r\n                else: Text_Type = \"AFD j -\"\r\n                MText = str(round(P_j,2)) + \" kN\"\r\n                Text_Info = [Jt_2, MText, Draw_ind]\r\n                Draw_Text(Text_Action, Text_Type, Text_Info, Draw_Data)\r\n    elif Action == \"Model Shear\":\r\n        Type = \"SFD\"\r\n        Colour = \"Blue\"\r\n        Jt_1 = Joint(\"Add\", [Jt_i, d_Vi])\r\n        Jt_2 = Joint(\"Add\", [Jt_j, d_Vj])\r\n        Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_1, Jt_2]; Draw_Data[r] += [Draw_Info]\r\n        if Dist(Jt_1, Jt_i) > dr_Tol: \r\n            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i, Jt_1]; Draw_Data[r] += [Draw_Info]\r\n            if V_i > 0: Text_Type = \"SFD i +\"\r\n            else: Text_Type = \"SFD i -\"\r\n            MText = str(round(V_i,2)) + \" kN\"\r\n            Text_Info = [Jt_1, MText, Draw_ind]\r\n            Draw_Text(Text_Action, Text_Type, Text_Info, Draw_Data)\r\n        if Dist(Jt_2, Jt_j) > dr_Tol: \r\n            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_2, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n            if abs(V_i - V_j) > dr_Tol:\r\n                if V_j > 0: Text_Type = \"SFD j +\"\r\n                else: Text_Type = \"SFD j -\"\r\n                MText = str(round(V_j,2)) + \" kN\"\r\n                Text_Info = [Jt_2, MText, Draw_ind]\r\n                Draw_Text(Text_Action, Text_Type, Text_Info, Draw_Data)\r\n    elif Action == \"Model Bending\":\r\n        Type = \"BMD\"\r\n        Colour = \"Red\"\r\n        Jt_1 = Joint(\"Add\", [Jt_i, d_Mi])\r\n        Jt_2 = Joint(\"Add\", [Jt_j, d_Mj])\r\n        if Dist(Jt_1, Jt_i) > dr_Tol: \r\n            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_i, Jt_1]; Draw_Data[r] += [Draw_Info]\r\n            if M_i > 0: Text_Type = \"BMD i -\" #Plot on top\r\n            else: Text_Type = \"BMD i +\"\r\n            MText = str(round(M_i,2)) + \" kNm\"\r\n            Text_Info = [Jt_1, MText, Draw_ind]\r\n            Draw_Text(Text_Action, Text_Type, Text_Info, Draw_Data)\r\n        if Dist(Jt_2, Jt_j) > dr_Tol: \r\n            Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_2, Jt_j]; Draw_Data[r] += [Draw_Info]\r\n            if M_j > 0: Text_Type = \"BMD j -\"\r\n            else: Text_Type = \"BMD j +\"\r\n            MText = str(round(M_j,2)) + \" kNm\"\r\n            Text_Info = [Jt_2, MText, Draw_ind]\r\n            Draw_Text(Text_Action, Text_Type, Text_Info, Draw_Data)\r\n        if Mbr_UDL <> 0: #Draw Quadratic BMD Curve\r\n            BMD_Abs = []\r\n            BMD_List = []\r\n            BMD_Jt = []\r\n            Segments = 8\r\n            Len = Dist(Jt_i, Jt_j) / 1000.0\r\n            d_L = Len*1.0 / Segments\r\n            for i in range(0,Segments):\r\n                M_1 = Intp(d_L*i, 0.0, Len, M_i, M_j)\r\n                M_2 = Intp(d_L*(i+1), 0.0, Len, M_i, M_j)\r\n                M_x1 = M_1 + Mbr_UDL * d_L*i / 2.0 * (Len - d_L*i)\r\n                M_x2 = M_2 + Mbr_UDL * d_L*(i+1) / 2.0 * (Len - d_L*(i+1))\r\n                d_M1 = Plane_Rot(0.0, 0.0, BMD_Sign * M_x1 * M_Scale * Def_Scale, Angle_B)  \r\n                d_M2 = Plane_Rot(0.0, 0.0, BMD_Sign * M_x2 * M_Scale * Def_Scale, Angle_B)  \r\n                d_1m = Plane_Rot(d_L*i * 1000.0, 0.0, 0.0, Angle_B) \r\n                d_2m = Plane_Rot(d_L*(i+1) * 1000.0, 0.0, 0.0, Angle_B) \r\n                Jt_1m = Joint(\"Add\", [Jt_i, d_1m, d_M1])\r\n                Jt_2m = Joint(\"Add\", [Jt_i, d_2m, d_M2])\r\n                Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_1m, Jt_2m]; Draw_Data[r] += [Draw_Info]\r\n                if i < Segments-1: BMD_Abs += [abs(M_x2)]; BMD_List += [M_x2]; BMD_Jt += [Jt_2m]\r\n            BMD_List_Sort, BMD_Jt_Sort = zip(*sorted(zip(BMD_List, BMD_Jt)))\r\n            if BMD_List_Sort[0] < min(M_i, M_j):\r\n                MText = str(round(BMD_List_Sort[0],2)) + \" kNm\"\r\n                Jt_t = BMD_Jt_Sort[0]\r\n                Text_Info = [Jt_t, MText, Draw_ind]\r\n                Draw_Text(Text_Action, \"BMD Max\", Text_Info, Draw_Data)\r\n            if BMD_List_Sort[-1] > max(M_i, M_j):\r\n                MText = str(round(BMD_List_Sort[-1],2)) + \" kNm\"\r\n                Jt_t = BMD_Jt_Sort[-1]\r\n                Text_Info = [Jt_t, MText, Draw_ind]\r\n                Draw_Text(Text_Action, \"BMD Max\", Text_Info, Draw_Data)\r\n        else: Draw_Info = [Type, Name, Colour, Cyl_Rad, Jt_1, Jt_2]; Draw_Data[r] += [Draw_Info]\r\n\r\n    \r\n############################## Run Functions ########################################\r\n\r\nFrame_Draw(\"Initial\", Jt_Info, Mbr_Info, Force_Scale, Draw_Data)\r\n\r\nMbr_Info_r, Inv_K, Gl_K_f, Gl_D, Gl_F = Frame_Analysis(Jt_Info, Mbr_Info)\r\n\r\nFrame_Draw(\"Results\", Jt_Info, Mbr_Info_r, Force_Scale, Draw_Data)\r\n\r\nResults = [Inv_K, Gl_D, Gl_F, Jt_Info, Mbr_Info_r]\r\n\r\n# Assign your output to the OUT variable.\r\nOUT = Draw_Data, Results\r\n",
+      "VariableInputPorts": true,
+      "Id": "3a9aefff964a447db354d013bcadc1a0",
+      "Inputs": [
+        {
+          "Id": "e41c11a10b4d4eebb83e883521f00cd9",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e6a96f008ceb42b2a99f4f3e31678d83",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b26e8f2eb67e4727a69d1c17c09bf0a8",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[4];",
+      "Id": "aa35e37141d64ddf892628369bd37565",
+      "Inputs": [
+        {
+          "Id": "3ae979a1dab449e5872131e4b13ab79d",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8d2b26177dfc40cd8dd19390ae3fcb43",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "3e6411e001574ea5b9a9d6fecaf1f41a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f2d58259e14b4b4695ef4fac4cd92d9e",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "c85c1070181349a49ed7a42043f0df49",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "caaf83466d8d41efb23a0e6352220137",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Ctrl =\n[Ld, Dim,\nAFD, SFD,\nBMD, Rct];",
+      "Id": "e4b506431b564cd39f6b2242b6d315ff",
+      "Inputs": [
+        {
+          "Id": "764b69918a794e5aa64fbaecb843842e",
+          "Name": "Ld",
+          "Description": "Ld",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8a37ffde5a39444883000e5f68a67847",
+          "Name": "Dim",
+          "Description": "Dim",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "beb3382106a94b9f9e8b3d497b5c7cdc",
+          "Name": "AFD",
+          "Description": "AFD",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "530c4413300342989eba440434d2b5a9",
+          "Name": "SFD",
+          "Description": "SFD",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "747c05f631a74a0e8a4b7c197317b0ff",
+          "Name": "BMD",
+          "Description": "BMD",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e68eb6d64aa7477399edcf29aabf43ea",
+          "Name": "Rct",
+          "Description": "Rct",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e3a27199705d4e5d87c61a1cbc81fe23",
+          "Name": "",
+          "Description": "Ctrl",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "e9f9fb25f47e4f41a93531417e26fd62",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "04b139e396ad4a82a2969fd9ace7378e",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[1];",
+      "Id": "0e933bb4405a4be5b7371038f86765b0",
+      "Inputs": [
+        {
+          "Id": "18fd51553c2a4aeeb91670a5e2da38bc",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dbfe0536029a4688b5ddd76045dc507f",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[2];",
+      "Id": "49733cdf351a41be94e9a6947ba63821",
+      "Inputs": [
+        {
+          "Id": "a8f73ca32a29428f98a0e8ea703b712e",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f47c9920440e437eaa19a72d5249e666",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//Joint Data = [Name, Restraint (F=Free), Coord (XYZ mm), Jt PVM (kN,kN,kNm)]\nSet_X = 0;\nSet_Y = 0;\nJt_A = [\"A\", [\"R\", \"R\", \"R\"], [Set_X + 0, Set_Y, 0], [0, 0, 0]];\nJt_B = [\"B\", [\"F\", \"F\", \"F\"], [Set_X + 6000, Set_Y, 4500], [15.0, 0, 20.0]];\nJt_C = [\"C\", [\"F\", \"F\", \"F\"], [Set_X + 9000, Set_Y, 4500], [0, -10.0, 0]];\nJt_D = [\"D\", [\"R\", \"R\", \"R\"], [Set_X + 12000, Set_Y, 4500], [0, 0, 0]];\nJt_Info = [Jt_A, Jt_B, Jt_C, Jt_D];\n\n//Material Property = [Elastic Mod MPa, MOI mm4, Area mm2]\nE_m = 200000;\nI_m = 60*1000000;\nA_m = 600;\nProp = [E_m, A_m, I_m];\n\n//Member data = [Name, Jt_i, Jt_j, UDL (kN/m), Material Property]\nMbr_1 = [\"Mbr 1\", \"A\", \"B\", 3.0, Prop];\nMbr_2 = [\"Mbr 2\", \"B\", \"C\", 0.0, Prop];\nMbr_3 = [\"Mbr 3\", \"C\", \"D\", 0.0, Prop];\nMbr_Info = [Mbr_1, Mbr_2, Mbr_3];\n\n//Input Summary\nInput = [Jt_Info, Mbr_Info];",
+      "Id": "eff8acbfbf894779aace99968abfaa0c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "948f206e1cf94cf29f7ead73d29876bd",
+          "Name": "",
+          "Description": "Set_X",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "345249146d7c49f287106731d27bc874",
+          "Name": "",
+          "Description": "Set_Y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "030ec60d2f8e499eb5383f1154025888",
+          "Name": "",
+          "Description": "Jt_A",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bb9482d349434e65a5506dcce063592f",
+          "Name": "",
+          "Description": "Jt_B",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2044fbd1563244358943038ee42fbdd9",
+          "Name": "",
+          "Description": "Jt_C",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3043d537d76d4394ad4a31c9e7d682bb",
+          "Name": "",
+          "Description": "Jt_D",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7007011fae4f401489c6d5fa52fb6f48",
+          "Name": "",
+          "Description": "Jt_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3feb0b2e062c458fa7233732a529141f",
+          "Name": "",
+          "Description": "E_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "23b6b227fec149f294e890a6102b1bc3",
+          "Name": "",
+          "Description": "I_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9607303834d242978e3b62856ab7f891",
+          "Name": "",
+          "Description": "A_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0c2d730210fe45528867d48484a62185",
+          "Name": "",
+          "Description": "Prop",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0d01a0adceff407aaea26f6d81e3bea1",
+          "Name": "",
+          "Description": "Mbr_1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "842ec23abad84a9c9bbccb0dbe34ae04",
+          "Name": "",
+          "Description": "Mbr_2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "306708f85b50415490554abc230727ac",
+          "Name": "",
+          "Description": "Mbr_3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "45006cf97ce943598adc92146e63fb9a",
+          "Name": "",
+          "Description": "Mbr_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9a7cd6d8fc0947c0b436082988956bcd",
+          "Name": "",
+          "Description": "Input",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[3];",
+      "Id": "2a60ea64f1404353bf669055b29e6b75",
+      "Inputs": [
+        {
+          "Id": "1ae5c7f2a6a24ae5861af9c608b47350",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0e7287fcd42d44128ed5daafb81aa8ca",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "IN[4];",
+      "Id": "02401e6b8e694b3a99f2da5f304c6534",
+      "Inputs": [
+        {
+          "Id": "da5768e1c7b841d38c071b84bad319f2",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a589ba7165fa4fe3a0357609a8255293",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//Joint Data = [Name, Restraint (F=Free), Coord (XYZ mm), Jt PVM (kN,kN,kNm)]\nSet_X = 0;\nSet_Y = 0;\nJt_A = [\"A\", [\"R\", \"R\", \"R\"], [Set_X + 0, Set_Y, 0], [0, 0, 0]];\nJt_B = [\"B\", [\"F\", \"F\", \"F\"], [Set_X + 0, Set_Y, 5000], [0, 0, 0]];\nJt_C = [\"C\", [\"F\", \"F\", \"F\"], [Set_X + 0, Set_Y, 10000], [0, 0, 0]];\nJt_D = [\"D\", [\"F\", \"F\", \"F\"], [Set_X + 0, Set_Y, 15000], [0, 0, 0]];\nJt_E = [\"E\", [\"R\", \"R\", \"R\"], [Set_X + 5000, Set_Y, 0], [0, 0, 0]];\nJt_F = [\"F\", [\"F\", \"F\", \"F\"], [Set_X + 5000, Set_Y, 5000], [5, 0, 0]];\nJt_G = [\"G\", [\"F\", \"F\", \"F\"], [Set_X + 5000, Set_Y, 10000], [5, 0, 0]];\nJt_H = [\"H\", [\"F\", \"F\", \"F\"], [Set_X + 5000, Set_Y, 15000], [5, 0, 0]];\nJt_Info = [Jt_A, Jt_B, Jt_C, Jt_D, Jt_E, Jt_F, Jt_G, Jt_H];\n\n//Material Property = [Elastic Mod MPa, MOI mm4, Area mm2]\nE_m = 200000;\nI_m = 60*1000000;\nA_m = 600;\nProp = [E_m, A_m, I_m];\n\n//Member data = [Jt_i, Jt_j, UDL (kN/m), Material Property]\nMbr_1 = [\"Mbr 1\", \"A\", \"B\", 0.0, Prop];\nMbr_2 = [\"Mbr 2\", \"B\", \"C\", 0.0, Prop];\nMbr_3 = [\"Mbr 3\", \"C\", \"D\", 0.0, Prop];\nMbr_4 = [\"Mbr 4\", \"E\", \"F\", 0.0, Prop];\nMbr_5 = [\"Mbr 5\", \"F\", \"G\", 0.0, Prop];\nMbr_6 = [\"Mbr 6\", \"G\", \"H\", 0.0, Prop];\nMbr_7 = [\"Mbr 7\", \"B\", \"F\", 0.0, Prop];\nMbr_8 = [\"Mbr 8\", \"C\", \"G\", 0.0, Prop];\nMbr_9 = [\"Mbr 9\", \"D\", \"H\", 0.0, Prop];\nMbr_Info = [Mbr_1, Mbr_2, Mbr_3, Mbr_4, Mbr_5, Mbr_6, Mbr_7, Mbr_8, Mbr_9];\n\n//Input Summary\nInput = [Jt_Info, Mbr_Info];",
+      "Id": "69615546475b4849b98409d338e18397",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "abe116962de1434286df643f4e821a6e",
+          "Name": "",
+          "Description": "Set_X",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4b8841f485ed4a81b9ea84b5ba1fdaf0",
+          "Name": "",
+          "Description": "Set_Y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "731b44684e754edca76ca7bf4f3b7b9e",
+          "Name": "",
+          "Description": "Jt_A",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6cadc02b49cd4d4fa972865595bda693",
+          "Name": "",
+          "Description": "Jt_B",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9dfada15f0184f5ca58f9c70ad30c343",
+          "Name": "",
+          "Description": "Jt_C",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c9d0047300154535b386dd2a35b13f85",
+          "Name": "",
+          "Description": "Jt_D",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bfe3ff660f6a47f6bd9886ffec047490",
+          "Name": "",
+          "Description": "Jt_E",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5817726060a84faab3ee7a92e1d66c3e",
+          "Name": "",
+          "Description": "Jt_F",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "44ca18bbdef24d68b3c91a2b01df5138",
+          "Name": "",
+          "Description": "Jt_G",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2ce13bf6dc944231bebea08f2c2de9fe",
+          "Name": "",
+          "Description": "Jt_H",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "16e826b3b83d4205a7463f9bbecdec72",
+          "Name": "",
+          "Description": "Jt_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "208daf7a4ff84daeb987e51329b533ff",
+          "Name": "",
+          "Description": "E_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6ae75ac5e06847ccb404e4b3ad62a994",
+          "Name": "",
+          "Description": "I_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e7f5421427a4402cb89ae6ffd64c8a58",
+          "Name": "",
+          "Description": "A_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2197e8d073414c679c764f823873204f",
+          "Name": "",
+          "Description": "Prop",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5213f39c307143d9a950fd020c6e093b",
+          "Name": "",
+          "Description": "Mbr_1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "259e5fbd9d3248c6b003667461b70105",
+          "Name": "",
+          "Description": "Mbr_2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8e1e4d83966046baa8d264a3e8aaa3bc",
+          "Name": "",
+          "Description": "Mbr_3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d8f091672406416c9d2fa2413efd3e7e",
+          "Name": "",
+          "Description": "Mbr_4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dceae95caf314acbbcb2ff7e5b7e663c",
+          "Name": "",
+          "Description": "Mbr_5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c8c9aef21977432d8621dec4a37977d6",
+          "Name": "",
+          "Description": "Mbr_6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c8ab85ac37da45c7b13f2365bc2ce845",
+          "Name": "",
+          "Description": "Mbr_7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "974b4f87837047e5b78978a863b30e55",
+          "Name": "",
+          "Description": "Mbr_8",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4ac29e4d41ed4ab2a31a59239989887c",
+          "Name": "",
+          "Description": "Mbr_9",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e9ff4b114f3040218d0a84d854dde3dd",
+          "Name": "",
+          "Description": "Mbr_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f1c8482a1b0e46d3a77421af49fdb6f1",
+          "Name": "",
+          "Description": "Input",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Enable Python support and load DesignScript library\r\nimport clr\r\nimport math\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\n\r\n# The inputs to this node will be stored as a list in the IN variables.\r\ndataEnteringNode = IN\r\n\r\n# Place your code below this line\r\nSize = IN[0]\r\nRad = IN[1]\r\nAO = [-10000, 0, 0] #Axis_Origin\r\n\r\nP_0 = Point.ByCoordinates(AO[0], AO[1], AO[2])\r\nP_X = Point.ByCoordinates(AO[0] + Size, AO[1], AO[2])\r\nP_Y = Point.ByCoordinates(AO[0], AO[1] + Size, AO[2])\r\nP_Z = Point.ByCoordinates(AO[0], AO[1], AO[2] + Size)\r\n\r\nC_X = Cylinder.ByPointsRadius(P_0, P_X, Rad)\r\nC_Y = Cylinder.ByPointsRadius(P_0, P_Y, Rad)\r\nC_Z = Cylinder.ByPointsRadius(P_0, P_Z, Rad)\r\nC_0 = Sphere.ByCenterPointRadius(P_0, Rad*2)\r\n\r\nXYZ_Axes = [C_X, C_Y, C_Z, C_0]\r\n\r\n# Assign your output to the OUT variable.\r\nOUT = XYZ_Axes",
+      "VariableInputPorts": true,
+      "Id": "f728670560d842a5aeb2f6e849aa6f83",
+      "Inputs": [
+        {
+          "Id": "55f2c2e5151d4c1fbc5374f7c06d33d8",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9fb591dd02da4bbe95c5f428820ddab2",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9f76713e3f6d468a91a16601574e4b9d",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 20000.0,
+      "MinimumValue": 0.0,
+      "StepValue": 500.0,
+      "InputValue": 5000.0,
+      "Id": "1f1bfb932dfe40138ff0b73df0d20ba9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1cd429d4193b445ebcabf1eec796d293",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 255,
+        "G": 0,
+        "B": 0,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "7b6f8a8d88354adba9a34194f3b8440f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4c3a3cea05314640b590af26c7511e9e",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a Color from the palette"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 127,
+        "G": 255,
+        "B": 0,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "3752b3f9d528432ca4c8abdc8ab94741",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4d607977832f4be88039351df57f3b38",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a Color from the palette"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 65,
+        "G": 105,
+        "B": 225,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "66129ab0236f4f6eaaf2cffdf3fce109",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ede892a5c6ff41a2aa7a18c4ece7f185",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a Color from the palette"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "d7c022dfb55d4c85bbfcba9294eee381",
+      "Inputs": [
+        {
+          "Id": "9f79d710bf704244ac4dbfaf07f79048",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0826578c23c04ba0b0aa55fefad40efe",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "731daab185bb4cb2bd16a07cbf11fd47",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "733eecd75c6e446f8fc733a68e1dd652",
+          "Name": "item3",
+          "Description": "Item Index #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "655c9e59c45e485ab2aa22685c12cdab",
+          "Name": "list",
+          "Description": "A list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list out of the given inputs"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 500.0,
+      "MinimumValue": 0.0,
+      "StepValue": 50.0,
+      "InputValue": 100.0,
+      "Id": "7e7f6d8af24b4422a54a05063f77da1f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d2a69176bcdc4d7ca75050b4fa69da87",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 153,
+        "G": 50,
+        "B": 204,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "ed2cf93b0199420aaa4149c9fd3fed82",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "578fb4c208684750ac167e8bd83afbc7",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a Color from the palette"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Modifiers.GeometryColor.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry,DSCore.Color",
+      "Id": "ed637c516b154489b6ac4e5b818cf3cc",
+      "Inputs": [
+        {
+          "Id": "3ce1bcddc27045de96c5db2f72b2c94e",
+          "Name": "geometry",
+          "Description": "The geometry to which you would like to apply color.\n\nGeometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3411d7ef41974cec92f2410829bfe15c",
+          "Name": "color",
+          "Description": "The color.\n\nColor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e61449339b27426f80fb5136d08eae84",
+          "Name": "GeometryColor",
+          "Description": "A Display object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Display geometry using a color.\n\nGeometryColor.ByGeometryColor (geometry: Geometry, color: Color): GeometryColor"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "//Joint Data = [Name, Restraint (F=Free), Coord (XYZ mm), Jt Forces (kN)]\nSet_X = 0;\nSet_Y = 0;\nJt_A = [\"A\", [\"R\", \"R\", \"R\"], [Set_X + 0, Set_Y, 0], [0, 0, 0]];\nJt_B = [\"B\", [\"F\", \"F\", \"F\"], [Set_X + 5000, Set_Y, 0], [0, 0, 0]];\nJt_C = [\"C\", [\"R\", \"R\", \"F\"], [Set_X + 10000, Set_Y, 0], [0, 0, 0]];\nJt_Info = [Jt_B, Jt_A, Jt_C];\n\n//Material Property = [Elastic Mod MPa, MOI mm4, Area mm2]\nE_m = 200000;\nI_m = 60*1000000;\nA_m = 600;\nProp = [E_m, A_m, I_m];\n\n//Member data = [Name, Jt_i, Jt_j, UDL (kN/m), Material Property]\nMbr_1 = [\"Mbr 1\", \"A\", \"B\", 5, Prop];\nMbr_2 = [\"Mbr 2\", \"B\", \"C\", 5, Prop];\nMbr_Info = [Mbr_1, Mbr_2];\n\n//Input Summary\nInput = [Jt_Info, Mbr_Info];",
+      "Id": "6d5c5ccc7b1545a795e01a4218941ca6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bbaedef6826642a0917f35ee0a09ca7c",
+          "Name": "",
+          "Description": "Set_X",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "427e17054fd94f58be4443ec5a4e8118",
+          "Name": "",
+          "Description": "Set_Y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f6e709ef2fdf4c86a945878f490a781c",
+          "Name": "",
+          "Description": "Jt_A",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e3f83202804a47d7aa745fb391f4868c",
+          "Name": "",
+          "Description": "Jt_B",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a8f9eecc115e41e2a607e60216651547",
+          "Name": "",
+          "Description": "Jt_C",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2d7b8b55164a42b08ec189608e0fc99a",
+          "Name": "",
+          "Description": "Jt_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ddd978577c0f4abb9c7f40acf898d094",
+          "Name": "",
+          "Description": "E_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b699aaac009a4cf69cce48f56a21e6c5",
+          "Name": "",
+          "Description": "I_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "11217534dc2b48b2adb7a81417996999",
+          "Name": "",
+          "Description": "A_m",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8a3b9858a8504e4fb7668f5afa044cdd",
+          "Name": "",
+          "Description": "Prop",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "76f47b108bd243a59df37a0b21b4b2b8",
+          "Name": "",
+          "Description": "Mbr_1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "46fadb2afecc48eba665f8aa2d69a5df",
+          "Name": "",
+          "Description": "Mbr_2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f62762d6d99340cd96f3ea56a0e2a2ca",
+          "Name": "",
+          "Description": "Mbr_Info",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "36d85a7ee13144eb8ba0a21459dc8f61",
+          "Name": "",
+          "Description": "Input",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Draw_Data = IN[0];",
+      "Id": "2cf8667b63254d8aba39c96c21482d18",
+      "Inputs": [
+        {
+          "Id": "0974c3c57d9a46dc908e7c4994c6e85c",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2f72ec05125344659186017edc56e969",
+          "Name": "",
+          "Description": "Draw_Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nimport math\r\n\r\n# The inputs to this node will be stored as a list in the IN variables.\r\ndataEnteringNode = IN\r\n\r\nDraw_Data = IN[0]\r\nShow_Ctrl = IN[1]\r\nShow_Ld, Show_Dim, Show_AFD, Show_SFD, Show_BMD, Show_Rct = Show_Ctrl\r\n\r\nDraw_Obj = []\r\nColour_Obj = [[] for i in range(0,3)]\r\nText_Obj = [[] for j in range(0,3)]\r\n\r\ndef Colour_Code(Colour_Name):\r\n    Colour_Code = [ [255,0,0], [255,0,255], [0,0,255], [0,255,255], [0,255,0], \r\n    \t\t\t\t[255,255,0], [130, 100, 255], [75, 200, 200], [0, 100, 0],\r\n                    [255,130,0], [0,0,0], [255,255,255], [0,130,0], [255,180,180], [125, 125, 125]]       \r\n    Colour_List = [ \"Red\", \"Purple\", \"Blue\", \"Teal\", \"Green\", \r\n    \t\t\t\t\"Yellow\", \"Violet\", \"Turquoise\", \"Forest\",\r\n                    \"Orange\", \"Black\", \"White\", \"Basil\", \"Pink\", \"Grey\"]\r\n    Def_Colour = [0,0,0] #\"Black\"\r\n    if Colour_Name in Colour_List: n = Colour_List.index(Colour_Name); Output = Colour_Code[n]\r\n    else: Output = Def_Colour\r\n    return Output\r\n    \r\ndef Draw_Pt(Cd):\r\n    return Point.ByCoordinates(Cd[0], Cd[1], Cd[2])\r\n    \r\ndef Draw_Vn(VN): #reminder to adjust to global angle\r\n    return Vector.ByCoordinates(VN[0], VN[1], VN[2])\r\n    \r\ndef Draw_Pts(Cds):\r\n    Pts = []\r\n    for i in range(0,len(Cds)): Pts += [Point.ByCoordinates(Cds[i][0], Cds[i][1], Cds[i][2])]\r\n    return Pts\r\n    \r\ndef Draw_Colour(Colour_Name, Colour_Obj):\r\n    R_Col, G_Col, B_Col = Colour_Code(Colour_Name)\r\n    Colour_Obj[0] += [R_Col]\r\n    Colour_Obj[1] += [G_Col]\r\n    Colour_Obj[2] += [B_Col]\r\n\r\n\r\nDraw_Ref = [\"Framing\", \"Applied Loads\", \"Internal Forces\", \"Reactions\", \"Dimensions\"]\r\nfor r in range(0,len(Draw_Ref)):\r\n\tShow = 0\r\n\tif r == 0: Show = 1\r\n\tif r == 1 and Show_Ld == True: Show = 1\r\n\telif r == 2 and (Show_AFD == True or Show_SFD == True or Show_BMD == True): Show = 1\r\n\telif r == 3 and Show_Rct == True: Show = 1\r\n\telif r == 4 and Show_Dim == True: Show = 1\r\n\tif Show == 1:\r\n\t\tfor i in range(0,len(Draw_Data[r])):\r\n\t\t\tType = Draw_Data[r][i][0]\r\n\t\t\tif Type == \"Text\":\r\n\t\t\t\tType, Name, MText, Jt_t, Jt_D = Draw_Data[r][i]\r\n\t\t\t\tShow_Text = 1\r\n\t\t\t\tif r == 2:\r\n\t\t\t\t\tShow_Text = 0\r\n\t\t\t\t\tif Name == \"AFD\" and Show_AFD == True: Show_Text = 1\r\n\t\t\t\t\tif Name == \"SFD\" and Show_SFD == True: Show_Text = 1\r\n\t\t\t\t\tif Name == \"BMD\" and Show_BMD == True: Show_Text = 1\r\n\t\t\t\tif Show_Text == 1:\r\n\t\t\t\t\tText_Obj[0] += [Draw_Pt(Jt_D)]\r\n\t\t\t\t\tText_Obj[1] += [Draw_Pt(Jt_t)]\r\n\t\t\t\t\tif isinstance(MText, float) == True: Text_Obj[2] += [str(int(MText))]\r\n\t\t\t\t\telse: Text_Obj[2] += [str(MText)] \r\n\t\t\t\t\r\n\t\t\telif Type == \"Circle\" or Type == \"Joint\":\r\n\t\t\t\tType, Name, Colour, Circle_Rad, Dir, Jt_0 = Draw_Data[r][i]\r\n\t\t\t\tVector = Draw_Vn(Dir)\r\n\t\t\t\tPt_0 = Draw_Pt(Jt_0)\r\n\t\t\t\tCircle = Circle.ByCenterPointRadiusNormal(Pt_0, Circle_Rad, Vector)\r\n\t\t\t\tDraw_Obj += [Circle]\r\n\t\t\t\tDraw_Colour(Colour, Colour_Obj)\r\n\t\t\t\t\r\n\t\t\telif Type in [\"Line\", \"Outline\", \"AFD\", \"SFD\", \"BMD\"]:\r\n\t\t\t\tType, Name, Colour, Cyl_Rad, Jt_1, Jt_2 = Draw_Data[r][i]\r\n\t\t\t\tPt_1 = Draw_Pt(Jt_1); Pt_2 = Draw_Pt(Jt_2)\r\n\t\t\t\tDraw_Line = 1\r\n\t\t\t\tif r == 2:\r\n\t\t\t\t\tDraw_Line = 0\r\n\t\t\t\t\tif Type == \"AFD\" and Show_AFD == True: Draw_Line = 1\r\n\t\t\t\t\tif Type == \"SFD\" and Show_SFD == True: Draw_Line = 1\r\n\t\t\t\t\tif Type == \"BMD\" and Show_BMD == True: Draw_Line = 1\r\n\t\t\t\tif Draw_Line == 1:\r\n\t\t\t\t\tDraw_Obj += [Line.ByStartPointEndPoint(Pt_1, Pt_2)] \r\n\t\t\t\t\tDraw_Colour(Colour, Colour_Obj)\r\n\t\t\t\r\n\t\t\telif Type == \"Cuboid\":\r\n\t\t\t\tType, Name, Colour, Mbr_Pts, Mbr_Dir = Draw_Data[r][i]\r\n\t\t\t\tPts = Draw_Pts(Mbr_Pts)\r\n\t\t\t\tVC = Draw_Vn(Mbr_Dir)\r\n\t\t\t\tPL = Polygon.ByPoints(Pts)\r\n\t\t\t\tDraw_Obj += [Curve.ExtrudeAsSolid(PL, VC)]\r\n\t\t\t\tDraw_Colour(Colour, Colour_Obj)\r\n\t\t\t\t\r\n\t\t\telif Type == \"Sphere\":\r\n\t\t\t\tType, Name, Colour, Sphere_Rad, Jt_0 = Draw_Data[r][i]\r\n\t\t\t\tPt_0 = Draw_Pt(Jt_0)\r\n\t\t\t\tDraw_Obj += [Sphere.ByCenterPointRadius(Pt_0, Sphere_Rad)]\r\n\t\t\t\tDraw_Colour(Colour, Colour_Obj)\r\n\t\t\t\t\r\n# Assign your output to the OUT variable.\r\n\r\nOUT = [Draw_Obj, Colour_Obj, Text_Obj]",
+      "VariableInputPorts": true,
+      "Id": "5ef31257532046c3a616ae2e4b8ff5f9",
+      "Inputs": [
+        {
+          "Id": "f33aa91a160648c7b2e414894044a455",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "77d85d66da364953ba334410d2ee69b7",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a267f193fb42410099c7ec9494296e7f",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Draw_Obj = IN[0];",
+      "Id": "97ae0fe063504aadb83fcd30ec5a4089",
+      "Inputs": [
+        {
+          "Id": "76393c0282f14d73b938135e6f01ef25",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6bee30109cd04d77946a47c3dc312f90",
+          "Name": "",
+          "Description": "Draw_Obj",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Colour_R = IN[1][0];\nColour_G = IN[1][1];\nColour_B = IN[1][2];",
+      "Id": "8438b476860a495a90cfd92fa58aa6a5",
+      "Inputs": [
+        {
+          "Id": "4ba69ad7735d452a9bbf9d94a21693cf",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "11489b9f6d934cdabbb6a0376693b720",
+          "Name": "",
+          "Description": "Colour_R",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "85837026a5bf44d387b34edefd9b5384",
+          "Name": "",
+          "Description": "Colour_G",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "18e30ddb287d4f00a9ac8798183db8ea",
+          "Name": "",
+          "Description": "Colour_B",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Color.ByARGB@int,int,int,int",
+      "Id": "95508da4f1a6473baa552d3f1818510f",
+      "Inputs": [
+        {
+          "Id": "5cc8e7cf02f44ed8a36a5b53d6a5131c",
+          "Name": "a",
+          "Description": "The alpha value.\n\nint\nDefault value : 255",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "28643d2f40a24d10a78116e02de8a8cc",
+          "Name": "r",
+          "Description": "The red value.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f37571db9e5640028bcb3f5b78e1e457",
+          "Name": "g",
+          "Description": "The green value.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4e134b08b4dc4ae9a4214450bb05bc53",
+          "Name": "b",
+          "Description": "The blue value.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cebbf671724a4aaab1a43d5661dc9115",
+          "Name": "color",
+          "Description": "Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Construct a color by alpha, red, green, and blue components.\n\nColor.ByARGB (a: int = 255, r: int = 0, g: int = 0, b: int = 0): Color"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Modifiers.GeometryColor.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry,DSCore.Color",
+      "Id": "c8dd743ca10243a4b0fc447af9490da8",
+      "Inputs": [
+        {
+          "Id": "14df9c27d58d43be93e657364e684cf5",
+          "Name": "geometry",
+          "Description": "The geometry to which you would like to apply color.\n\nGeometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "998eff53b36444789f793088f4274c63",
+          "Name": "color",
+          "Description": "The color.\n\nColor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "87d35fae31b9460cb50edf720e375e0f",
+          "Name": "GeometryColor",
+          "Description": "A Display object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Display geometry using a color.\n\nGeometryColor.ByGeometryColor (geometry: Geometry, color: Color): GeometryColor"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Text_Data = IN[2];",
+      "Id": "b22c20f0f4d54e5b9bfec443180395b2",
+      "Inputs": [
+        {
+          "Id": "3e047751f6524c3eb9598e071a757d3b",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3e4ff799524d47b48916abbfe7b592dd",
+          "Name": "",
+          "Description": "Text_Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Dyn_2D = IN[0];\nLoc_2D = IN[1];\nText_2D = IN[2];",
+      "Id": "28d5cefafdc648d0b9ebb6369a9fcc13",
+      "Inputs": [
+        {
+          "Id": "a156dd16b3ef41ceb2e0fa1a6c00729c",
+          "Name": "IN",
+          "Description": "IN",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "14200cf6a98444dda4dd7f099864ed30",
+          "Name": "",
+          "Description": "Dyn_2D",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "407060d36a494f409fdd0b4f2d541b67",
+          "Name": "",
+          "Description": "Loc_2D",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e269155a0df843569df0f46679bee5af",
+          "Name": "",
+          "Description": "Text_2D",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.TextNote.ByLocation@Revit.Elements.Views.View,Autodesk.DesignScript.Geometry.Point,string,string,Revit.Elements.TextNoteType,bool,double",
+      "Id": "8fb68deb34464a88a3e3fc50cf07da0a",
+      "Inputs": [
+        {
+          "Id": "77873f27659b443db1008db6ca9dd3b8",
+          "Name": "view",
+          "Description": "View to place text element on\n\nView",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "387e0b69308e4079976075b3b6ed875d",
+          "Name": "location",
+          "Description": "Location in view\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8cbf491f54ee42afa8d218ce25bb76fc",
+          "Name": "text",
+          "Description": "Text\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "41e0d08d96354e7898f2763512dbb885",
+          "Name": "alignment",
+          "Description": "Text alignment\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "99738005d54f485ab63b190ca4884fe3",
+          "Name": "type",
+          "Description": "Revit TextNote Type\n\nTextNoteType\nDefault value : Revit.Elements.TextNoteType.Default()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "487c0522ea08411e843d13486cb79206",
+          "Name": "keepRotatedTextReadable",
+          "Description": "Keep text horizontal\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f01319bc5f2d4731891475dd67b6d458",
+          "Name": "rotation",
+          "Description": "Rotation in degrees\n\ndouble\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2683a74b610d4d399d6f7b84baea316c",
+          "Name": "TextNote",
+          "Description": "TextNote",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Construct a new Revit TextNote by Location\n\nTextNote.ByLocation (view: View, location: Point, text: string, alignment: string, type: TextNoteType = Revit.Elements.TextNoteType.Default(), keepRotatedTextReadable: bool = true, rotation: double = 0): TextNote"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.TextNote.Text",
+      "Id": "017466564ab747d7828c710e449c99aa",
+      "Inputs": [
+        {
+          "Id": "01e96075474044bd8d847418986eefe9",
+          "Name": "textNote",
+          "Description": "Revit.Elements.TextNote",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "47c7001fcd644915a56558ec8b8e6263",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get Text\n\nTextNote.Text: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynamoText.Text.FromStringOriginAndScale@string,Autodesk.DesignScript.Geometry.Point,double",
+      "Id": "50bc47529fee431489797118197db2ac",
+      "Inputs": [
+        {
+          "Id": "6cc482fecfe04e4587725406e6669311",
+          "Name": "text",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "efb5950a874e49b69ceaad6fc9d85ef9",
+          "Name": "origin",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a1ad96c336454b4292d65e74dfc2f808",
+          "Name": "scale",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1d532e677a19462daff94b987c0c18d9",
+          "Name": "Curve[]",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Text.FromStringOriginAndScale (text: string, origin: Point, scale: double): Curve[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Modifiers.GeometryColor.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry,DSCore.Color",
+      "Id": "d0b599785d9949bfb8ec863dc6d01fc2",
+      "Inputs": [
+        {
+          "Id": "3ae0b6cd0ec042c8965894039d29574b",
+          "Name": "geometry",
+          "Description": "The geometry to which you would like to apply color.\n\nGeometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bff9ac2a178e4a7294b9562d0b3b6cd5",
+          "Name": "color",
+          "Description": "The color.\n\nColor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f2f1509c5fb545bfbcbbf40a6aecf9f9",
+          "Name": "GeometryColor",
+          "Description": "A Display object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Display geometry using a color.\n\nGeometryColor.ByGeometryColor (geometry: Geometry, color: Color): GeometryColor"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Size = 420;",
+      "Id": "6711884d364044d7abc748f9f856bca4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ce5408c7d6cb42909bc786c3790ee368",
+          "Name": "",
+          "Description": "Size",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 0,
+        "G": 0,
+        "B": 0,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "84462184a0b24a6bb21844a172a1bf2a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e9c551a7b20c44fabc3f8e0b0c8d59eb",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a Color from the palette"
+    },
+    {
+      "ConcreteType": "archilabUI.HorizontalAlignmentStyleUi, archilabUI2021",
+      "SelectedIndex": 1,
+      "SelectedString": "Left",
+      "NodeType": "ExtensionNode",
+      "Id": "4665f399fcd045d29478476e141f43a8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0ec8753e99834aa3a3f26041c1742ce4",
+          "Name": "horizontalAlignmentStyle",
+          "Description": "The selected horizontalAlignmentStyle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Retrieve all available Horizontal Alignment Styles from Revit project."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Rotate@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Vector,double",
+      "Id": "01af6e9cbef84fbb86f67cfae56f5a65",
+      "Inputs": [
+        {
+          "Id": "faf23d83753646ef81637e024edc58c0",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e8e50a8d6ee74b0492886020240d559a",
+          "Name": "origin",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "85067a721813490198801a213bdd9431",
+          "Name": "axis",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2757f7941b0f432494ce059889db6842",
+          "Name": "degrees",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1fe53f661a15469f9906d414fcf23ea5",
+          "Name": "Geometry",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Rotates an object around an origin and an axis by a specified degree\n\nGeometry.Rotate (origin: Point, axis: Vector, degrees: double = 0): Geometry"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Views, DSRevitNodesUI",
+      "SelectedIndex": 9,
+      "SelectedString": "PDF",
+      "NodeType": "ExtensionNode",
+      "Id": "b6b6fd6504bd4803a78b2303215d80ef",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "39e6819775b340f59827a1d98d86d077",
+          "Name": "Views",
+          "Description": "The selected Views",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All views available in the current document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Vector.XAxis();\n90;",
+      "Id": "801e7c8d846740019bedc7e9202e538b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b03093e128ac433ea32c1170cb08284d",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "125b113d665c4fd787b104c719f7ad06",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "1bfc339bb5744024b2ba5481b4b1a1bc",
+      "End": "d3db64ea8b024716b83947162d1b04a5",
+      "Id": "49bbb115de2d4092af7f46fc2c804fae"
+    },
+    {
+      "Start": "c1939bdb59f345be91c8f5516251c40c",
+      "End": "4e539909026b4cdf9f95bba5805640a5",
+      "Id": "6e0a04c149ab4987afe7f4b22a5a20e1"
+    },
+    {
+      "Start": "c1939bdb59f345be91c8f5516251c40c",
+      "End": "7123072256d74cae8a0c08f4089ff620",
+      "Id": "d2d948a96d374a0ebb04fe343523b030"
+    },
+    {
+      "Start": "c1939bdb59f345be91c8f5516251c40c",
+      "End": "dc569bf4f38e4d42ae44b7f0423d39ea",
+      "Id": "ff3d12dd4d754d60a026403dd814adc0"
+    },
+    {
+      "Start": "f1a8dd84c6744c50b7c631334762c7a7",
+      "End": "e41c11a10b4d4eebb83e883521f00cd9",
+      "Id": "57302dbf18534d2189ad35033eb90821"
+    },
+    {
+      "Start": "352acbc0e7b44c04ab741c9903862175",
+      "End": "e6a96f008ceb42b2a99f4f3e31678d83",
+      "Id": "a4c6f4dcfc10406c8d3527aaddd635bc"
+    },
+    {
+      "Start": "4f270cdbb4ad4228bc6e32bac95ab60d",
+      "End": "5e7885ea02c64cc6a2474f401fbf44a6",
+      "Id": "0d445e4f8871434c946ed966c6f63f4c"
+    },
+    {
+      "Start": "e03d79d083d142789bd81b66ccedb160",
+      "End": "9709443314da4f7284273d86b5747733",
+      "Id": "f86137dcc2a04ed6b69a92ecc971c098"
+    },
+    {
+      "Start": "e03d79d083d142789bd81b66ccedb160",
+      "End": "0751707b79b3487f9ffe996d449e564a",
+      "Id": "e72c39fb48d040bf9dd224671b2f60c5"
+    },
+    {
+      "Start": "e03d79d083d142789bd81b66ccedb160",
+      "End": "1563a3b672a149dfbeadac6e130db7a2",
+      "Id": "f24fbfb682484acabbab0da2dbcd8789"
+    },
+    {
+      "Start": "e03d79d083d142789bd81b66ccedb160",
+      "End": "52c3af503adc43c7a3f5a4799cec0d53",
+      "Id": "b67bffcbd1ae46b08e6db5ba842f1823"
+    },
+    {
+      "Start": "e03d79d083d142789bd81b66ccedb160",
+      "End": "3ae979a1dab449e5872131e4b13ab79d",
+      "Id": "73164f1a36634b20b6585f5d6fc0d945"
+    },
+    {
+      "Start": "35000393e70d4f1eb8ccd928e1a55817",
+      "End": "2e44359815924375b8683edbce320ca2",
+      "Id": "52bf3b5f5b9549ff8e8878f2a37f2804"
+    },
+    {
+      "Start": "8f8a8f72d7ee4ef28047b10d8741de62",
+      "End": "96f514626c80410aa699633960c78713",
+      "Id": "4d56240a2aaf416f8122fb5d570fbf92"
+    },
+    {
+      "Start": "6807bed9f96c49eeb18923f04081dec0",
+      "End": "764b69918a794e5aa64fbaecb843842e",
+      "Id": "f1e9fd8559e64f9c85ac3edbb0a7e4cd"
+    },
+    {
+      "Start": "e35e18fac919496a9e2943f4063f037c",
+      "End": "e68eb6d64aa7477399edcf29aabf43ea",
+      "Id": "546e25778f0d4899bd53e21cbb865b13"
+    },
+    {
+      "Start": "7ad84498bf1d429dae9de66d20541bf8",
+      "End": "beb3382106a94b9f9e8b3d497b5c7cdc",
+      "Id": "4385593d26ca478b886882e2c204ae20"
+    },
+    {
+      "Start": "a6a06a271861471f875bebc4341c034c",
+      "End": "de1cc7433af54ae7a87de426b761a683",
+      "Id": "080587d0ef714d7a9f38be2cf6599955"
+    },
+    {
+      "Start": "a6a06a271861471f875bebc4341c034c",
+      "End": "18fd51553c2a4aeeb91670a5e2da38bc",
+      "Id": "c6c89b22662a4d74bd5f05b511ab29b7"
+    },
+    {
+      "Start": "a6a06a271861471f875bebc4341c034c",
+      "End": "a8f73ca32a29428f98a0e8ea703b712e",
+      "Id": "98bb9e895a7b476e923ee4b63fcc5160"
+    },
+    {
+      "Start": "a6a06a271861471f875bebc4341c034c",
+      "End": "1ae5c7f2a6a24ae5861af9c608b47350",
+      "Id": "b3823fd559014ab690ebc4cd8d013e81"
+    },
+    {
+      "Start": "a6a06a271861471f875bebc4341c034c",
+      "End": "da5768e1c7b841d38c071b84bad319f2",
+      "Id": "3a0cb0f562654ce5860d5ea39aa02419"
+    },
+    {
+      "Start": "b26e8f2eb67e4727a69d1c17c09bf0a8",
+      "End": "457f6399b97e456ea23ff44c8ec44779",
+      "Id": "2b00048caa894ec8bda37845a90cbfe3"
+    },
+    {
+      "Start": "b26e8f2eb67e4727a69d1c17c09bf0a8",
+      "End": "0974c3c57d9a46dc908e7c4994c6e85c",
+      "Id": "2e874799c84348988a4a221b521baff5"
+    },
+    {
+      "Start": "f2d58259e14b4b4695ef4fac4cd92d9e",
+      "End": "530c4413300342989eba440434d2b5a9",
+      "Id": "ad5d2a0c424b484f933cffcee07e4b3b"
+    },
+    {
+      "Start": "caaf83466d8d41efb23a0e6352220137",
+      "End": "747c05f631a74a0e8a4b7c197317b0ff",
+      "Id": "99ae1d8c65ab4837a3af9f6aabc783ed"
+    },
+    {
+      "Start": "e3a27199705d4e5d87c61a1cbc81fe23",
+      "End": "77d85d66da364953ba334410d2ee69b7",
+      "Id": "f641fba2eb224596b33751ea82ff57c4"
+    },
+    {
+      "Start": "04b139e396ad4a82a2969fd9ace7378e",
+      "End": "8a37ffde5a39444883000e5f68a67847",
+      "Id": "beabb13de30b46c697650cd1618af424"
+    },
+    {
+      "Start": "9a7cd6d8fc0947c0b436082988956bcd",
+      "End": "6acd965c66df4dce8ef78ed60617872b",
+      "Id": "f13eb23cfef44c3490ab7232a2b04804"
+    },
+    {
+      "Start": "f1c8482a1b0e46d3a77421af49fdb6f1",
+      "End": "23180053f7994c2cbe15262713ba8a1d",
+      "Id": "cfa991aeae8444ff961b49e943726a36"
+    },
+    {
+      "Start": "9f76713e3f6d468a91a16601574e4b9d",
+      "End": "3ce1bcddc27045de96c5db2f72b2c94e",
+      "Id": "b0c649bdef2e4e2a8462a97d6baa52cd"
+    },
+    {
+      "Start": "1cd429d4193b445ebcabf1eec796d293",
+      "End": "55f2c2e5151d4c1fbc5374f7c06d33d8",
+      "Id": "21a78bb6a6ac4a43a87dc9c0bece6159"
+    },
+    {
+      "Start": "4c3a3cea05314640b590af26c7511e9e",
+      "End": "9f79d710bf704244ac4dbfaf07f79048",
+      "Id": "3a54ed6530df486b9256031bbc2b7089"
+    },
+    {
+      "Start": "4d607977832f4be88039351df57f3b38",
+      "End": "0826578c23c04ba0b0aa55fefad40efe",
+      "Id": "7c5cb633e28942a4a3f85bcb2556c4bf"
+    },
+    {
+      "Start": "ede892a5c6ff41a2aa7a18c4ece7f185",
+      "End": "731daab185bb4cb2bd16a07cbf11fd47",
+      "Id": "a5de29b748074cd09644f221df6e03b9"
+    },
+    {
+      "Start": "655c9e59c45e485ab2aa22685c12cdab",
+      "End": "3411d7ef41974cec92f2410829bfe15c",
+      "Id": "0e7e33658f9e49588265ef491b954977"
+    },
+    {
+      "Start": "d2a69176bcdc4d7ca75050b4fa69da87",
+      "End": "9fb591dd02da4bbe95c5f428820ddab2",
+      "Id": "e843bb2b21e5470497f2499d47b1708b"
+    },
+    {
+      "Start": "578fb4c208684750ac167e8bd83afbc7",
+      "End": "733eecd75c6e446f8fc733a68e1dd652",
+      "Id": "a136fb35482347078eb4d727efaf723b"
+    },
+    {
+      "Start": "36d85a7ee13144eb8ba0a21459dc8f61",
+      "End": "580e93dc340245e29d7744508e699dff",
+      "Id": "d1434827bcb44f418bd6069707b4c1db"
+    },
+    {
+      "Start": "2f72ec05125344659186017edc56e969",
+      "End": "f33aa91a160648c7b2e414894044a455",
+      "Id": "fc5216dcb74746f2a81e68b114182b5b"
+    },
+    {
+      "Start": "a267f193fb42410099c7ec9494296e7f",
+      "End": "76393c0282f14d73b938135e6f01ef25",
+      "Id": "f5a3579775b04007b137d8eb9973de65"
+    },
+    {
+      "Start": "a267f193fb42410099c7ec9494296e7f",
+      "End": "4ba69ad7735d452a9bbf9d94a21693cf",
+      "Id": "187a1b7e4a0e496e8159b0033871125f"
+    },
+    {
+      "Start": "a267f193fb42410099c7ec9494296e7f",
+      "End": "3e047751f6524c3eb9598e071a757d3b",
+      "Id": "175291d8ad9447b496f795c3c3aa646a"
+    },
+    {
+      "Start": "6bee30109cd04d77946a47c3dc312f90",
+      "End": "14df9c27d58d43be93e657364e684cf5",
+      "Id": "90328cdf90794cd580fffa6f1a9424e6"
+    },
+    {
+      "Start": "11489b9f6d934cdabbb6a0376693b720",
+      "End": "28643d2f40a24d10a78116e02de8a8cc",
+      "Id": "94c091c0a5754fc1966f82611883c77a"
+    },
+    {
+      "Start": "85837026a5bf44d387b34edefd9b5384",
+      "End": "f37571db9e5640028bcb3f5b78e1e457",
+      "Id": "f76c38bf4a674e08a038bab02b3333ed"
+    },
+    {
+      "Start": "18e30ddb287d4f00a9ac8798183db8ea",
+      "End": "4e134b08b4dc4ae9a4214450bb05bc53",
+      "Id": "934cea3e82b3416186db89133a6f2ff3"
+    },
+    {
+      "Start": "cebbf671724a4aaab1a43d5661dc9115",
+      "End": "998eff53b36444789f793088f4274c63",
+      "Id": "623da4ba65644eab947017f3822a2488"
+    },
+    {
+      "Start": "3e4ff799524d47b48916abbfe7b592dd",
+      "End": "a156dd16b3ef41ceb2e0fa1a6c00729c",
+      "Id": "6692a63d1b9a40029f52dc378e469a48"
+    },
+    {
+      "Start": "14200cf6a98444dda4dd7f099864ed30",
+      "End": "efb5950a874e49b69ceaad6fc9d85ef9",
+      "Id": "797ada38a17546139256f5e7470cb06d"
+    },
+    {
+      "Start": "14200cf6a98444dda4dd7f099864ed30",
+      "End": "e8e50a8d6ee74b0492886020240d559a",
+      "Id": "d0133cf895574b3288ac6656ca9b1a81"
+    },
+    {
+      "Start": "407060d36a494f409fdd0b4f2d541b67",
+      "End": "387e0b69308e4079976075b3b6ed875d",
+      "Id": "9ecc2134394f41b9b2d6d0e818e26380"
+    },
+    {
+      "Start": "e269155a0df843569df0f46679bee5af",
+      "End": "8cbf491f54ee42afa8d218ce25bb76fc",
+      "Id": "feb9a6ce03c24f9ea2151a1ab5ead271"
+    },
+    {
+      "Start": "2683a74b610d4d399d6f7b84baea316c",
+      "End": "01e96075474044bd8d847418986eefe9",
+      "Id": "adf0639f94d048c9b715ea3196020241"
+    },
+    {
+      "Start": "47c7001fcd644915a56558ec8b8e6263",
+      "End": "6cc482fecfe04e4587725406e6669311",
+      "Id": "b4287ef772ab428b93af5f475cf1afd2"
+    },
+    {
+      "Start": "1d532e677a19462daff94b987c0c18d9",
+      "End": "faf23d83753646ef81637e024edc58c0",
+      "Id": "1531af0cdbc14b648cdd1223daad3800"
+    },
+    {
+      "Start": "ce5408c7d6cb42909bc786c3790ee368",
+      "End": "a1ad96c336454b4292d65e74dfc2f808",
+      "Id": "12858f14fc4546c098564af9842b4bcf"
+    },
+    {
+      "Start": "e9c551a7b20c44fabc3f8e0b0c8d59eb",
+      "End": "bff9ac2a178e4a7294b9562d0b3b6cd5",
+      "Id": "02d4041fd7ff4e80a0edf37448ae91dd"
+    },
+    {
+      "Start": "0ec8753e99834aa3a3f26041c1742ce4",
+      "End": "41e0d08d96354e7898f2763512dbb885",
+      "Id": "ef5b754b49e144b883383d3e123342ac"
+    },
+    {
+      "Start": "1fe53f661a15469f9906d414fcf23ea5",
+      "End": "3ae0b6cd0ec042c8965894039d29574b",
+      "Id": "1de1a78c7f9b4712b870102efbe6be55"
+    },
+    {
+      "Start": "39e6819775b340f59827a1d98d86d077",
+      "End": "77873f27659b443db1008db6ca9dd3b8",
+      "Id": "4241a1ec58044008adf61c2385e9cebc"
+    },
+    {
+      "Start": "b03093e128ac433ea32c1170cb08284d",
+      "End": "85067a721813490198801a213bdd9431",
+      "Id": "51dafe9c90f84b948e0771e1f9efd6f5"
+    },
+    {
+      "Start": "125b113d665c4fd787b104c719f7ad06",
+      "End": "2757f7941b0f432494ce059889db6842",
+      "Id": "132af9216cc3417e91018579f4f30a80"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [
+    {
+      "NodeId": "8fb68deb-3446-4a88-a3e3-fc50cf07da0a",
+      "Binding": {
+        "ByLocation_InClassDecl-1_InFunctionScope-1_Instance1_8fb68deb-3446-4a88-a3e3-fc50cf07da0a": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMS4wLjc1MDAlMkMlMjBDdWx0dXJlJTNEbmV1dHJhbCUyQyUyMFB1YmxpY0tleVRva2VuJTNEbnVsbCI+DQo8TnVtYmVyT2ZFbGVtZW50cz4xPC9OdW1iZXJPZkVsZW1lbnRzPg0KPEJhc2UtMF9IYXNEYXRhPmZhbHNlPC9CYXNlLTBfSGFzRGF0YT4NCjxCYXNlLTBfSGFzTmVzdGVkRGF0YT50cnVlPC9CYXNlLTBfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTBfTmVzdGVkRGF0YUNvdW50PjEwPC9CYXNlLTBfTmVzdGVkRGF0YUNvdW50Pg0KPEJhc2UtMC0wX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTBfSGFzRGF0YT4NCjxCYXNlLTAtMF9EYXRhIGlkPSJyZWYtMyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDNOek16SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK01qY3lORGRsWVRjdE5XUTVZaTAwT1RrNExUazNNalF0T0daa016TXhZVEZtTXprd0xUQXdNRGhoTkdZeVBDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENDFOalkxTVRROEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTBfRGF0YT4NCjxCYXNlLTAtMF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0xX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTFfSGFzRGF0YT4NCjxCYXNlLTAtMV9EYXRhIGlkPSJyZWYtNCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDNOek16SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK01qY3lORGRsWVRjdE5XUTVZaTAwT1RrNExUazNNalF0T0daa016TXhZVEZtTXprd0xUQXdNRGhoTkdZelBDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENDFOalkxTVRVOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTFfRGF0YT4NCjxCYXNlLTAtMV9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0yX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTJfSGFzRGF0YT4NCjxCYXNlLTAtMl9EYXRhIGlkPSJyZWYtNSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDNOek16SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK01qY3lORGRsWVRjdE5XUTVZaTAwT1RrNExUazNNalF0T0daa016TXhZVEZtTXprd0xUQXdNRGhoTkdZMFBDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENDFOalkxTVRZOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTJfRGF0YT4NCjxCYXNlLTAtMl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMl9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0zX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTNfSGFzRGF0YT4NCjxCYXNlLTAtM19EYXRhIGlkPSJyZWYtNiI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDNOek16SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK01qY3lORGRsWVRjdE5XUTVZaTAwT1RrNExUazNNalF0T0daa016TXhZVEZtTXprd0xUQXdNRGhoTkdaaVBDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENDFOalkxTWpNOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTNfRGF0YT4NCjxCYXNlLTAtM19IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtM19IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC00X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTRfSGFzRGF0YT4NCjxCYXNlLTAtNF9EYXRhIGlkPSJyZWYtNyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDNOek16SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK01qY3lORGRsWVRjdE5XUTVZaTAwT1RrNExUazNNalF0T0daa016TXhZVEZtTXprd0xUQXdNRGhoTlRGbFBDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENDFOalkxTlRnOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTRfRGF0YT4NCjxCYXNlLTAtNF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC01X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTVfSGFzRGF0YT4NCjxCYXNlLTAtNV9EYXRhIGlkPSJyZWYtOCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDNOek16SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK01qY3lORGRsWVRjdE5XUTVZaTAwT1RrNExUazNNalF0T0daa016TXhZVEZtTXprd0xUQXdNRGhoTlRjMlBDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENDFOalkyTkRZOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTVfRGF0YT4NCjxCYXNlLTAtNV9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC02X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTZfSGFzRGF0YT4NCjxCYXNlLTAtNl9EYXRhIGlkPSJyZWYtOSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDNOek16SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK01qY3lORGRsWVRjdE5XUTVZaTAwT1RrNExUazNNalF0T0daa016TXhZVEZtTXprd0xUQXdNRGhoTlRjM1BDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENDFOalkyTkRjOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTZfRGF0YT4NCjxCYXNlLTAtNl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNl9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC03X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTdfSGFzRGF0YT4NCjxCYXNlLTAtN19EYXRhIGlkPSJyZWYtMTAiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBVMlZ5ZG1salpYTXVVR1Z5YzJsemRHVnVZMlV2VW1WMmFYUlRaWEoyYVdObGN5VXlReVV5TUZabGNuTnBiMjRsTTBReUxqRXVNQzQzTnpNekpUSkRKVEl3UTNWc2RIVnlaU1V6Ukc1bGRYUnlZV3dsTWtNbE1qQlFkV0pzYVdOTFpYbFViMnRsYmlVelJHNTFiR3dpUGcwS1BITjBjbWx1WjBsRUlHbGtQU0p5WldZdE15SStNamN5TkRkbFlUY3ROV1E1WWkwME9UazRMVGszTWpRdE9HWmtNek14WVRGbU16a3dMVEF3TURoaE5UYzRQQzl6ZEhKcGJtZEpSRDROQ2p4cGJuUkpSRDQxTmpZMk5EZzhMMmx1ZEVsRVBnMEtQQzloTVRwVFpYSnBZV3hwZW1GaWJHVkpaRDROQ2p3dlUwOUJVQzFGVGxZNlFtOWtlVDROQ2p3dlUwOUJVQzFGVGxZNlJXNTJaV3h2Y0dVK0RRbz08L0Jhc2UtMC03X0RhdGE+DQo8QmFzZS0wLTdfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTdfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtOF9IYXNEYXRhPnRydWU8L0Jhc2UtMC04X0hhc0RhdGE+DQo8QmFzZS0wLThfRGF0YSBpZD0icmVmLTExIj5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV1TUM0M056TXpKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQSE4wY21sdVowbEVJR2xrUFNKeVpXWXRNeUkrTWpjeU5EZGxZVGN0TldRNVlpMDBPVGs0TFRrM01qUXRPR1prTXpNeFlURm1Nemt3TFRBd01EaGhOVGM1UEM5emRISnBibWRKUkQ0TkNqeHBiblJKUkQ0MU5qWTJORGs4TDJsdWRFbEVQZzBLUEM5aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkQ0TkNqd3ZVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqd3ZVMDlCVUMxRlRsWTZSVzUyWld4dmNHVStEUW89PC9CYXNlLTAtOF9EYXRhPg0KPEJhc2UtMC04X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC04X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTlfSGFzRGF0YT50cnVlPC9CYXNlLTAtOV9IYXNEYXRhPg0KPEJhc2UtMC05X0RhdGEgaWQ9InJlZi0xMiI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFdU1DNDNOek16SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEhOMGNtbHVaMGxFSUdsa1BTSnlaV1l0TXlJK01qY3lORGRsWVRjdE5XUTVZaTAwT1RrNExUazNNalF0T0daa016TXhZVEZtTXprd0xUQXdNRGhoTlRkaFBDOXpkSEpwYm1kSlJENE5DanhwYm5SSlJENDFOalkyTlRBOEwybHVkRWxFUGcwS1BDOWhNVHBUWlhKcFlXeHBlbUZpYkdWSlpENE5Dand2VTA5QlVDMUZUbFk2UW05a2VUNE5Dand2VTA5QlVDMUZUbFk2Ulc1MlpXeHZjR1UrRFFvPTwvQmFzZS0wLTlfRGF0YT4NCjxCYXNlLTAtOV9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtOV9IYXNOZXN0ZWREYXRhPg0KPC9hMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXI+DQo8L1NPQVAtRU5WOkJvZHk+DQo8L1NPQVAtRU5WOkVudmVsb3BlPg0K"
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 100.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.7500",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -1581.2246843362072,
+      "EyeY": 1850.2913108273769,
+      "EyeZ": 9961.1687116139547,
+      "LookX": 168.12611413988975,
+      "LookY": -988.465575335714,
+      "LookZ": -13972.849779081567,
+      "UpX": -0.0017437435466408136,
+      "UpY": 0.98944163858117662,
+      "UpZ": 0.14492136902720637
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Test Cases",
+        "Id": "7d54fbdacbfa48fcab2f3989f186c11f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5122.3347347020781,
+        "Y": -1184.8960501706879
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Force Scale Drawn",
+        "Id": "e13dee31af724bafa41b032759071bb1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5159.1459162790443,
+        "Y": -240.44606616979416
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "245b50a5df7e4a018c6cfb987f5704b2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5505.213178217351,
+        "Y": -317.33736513374549
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "3982263ed7404e99bfc78fbb96db8770",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5892.5645560331905,
+        "Y": 94.36054104458367
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Show Example",
+        "Id": "7335c2ad1f9e4419b365fe7a7c6cadae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5158.3149956920788,
+        "Y": -344.85394615592293
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Examples 1, 2 & 3 verified based on link below",
+        "Id": "6dbaf129787c4b96bdf80e9dab86fa7e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5134.11298650115,
+        "Y": -22.448960407952427
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Matrix Inverse",
+        "Id": "b9fe5773502b4bdc843e39f5bd96b405",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5331.6682819391481,
+        "Y": -1189.6192434804479
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "M inv",
+        "Id": "941da8334d6e493fb79878f5e28a8f31",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5515.4293316447684,
+        "Y": -1184.596588852382
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "L",
+        "Id": "2b99f007728e46d1b5f07ddfc9eb4c2f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5722.577539482606,
+        "Y": -1185.3918124125698
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "U",
+        "Id": "7af95d41936041368abc80265278f894",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5923.1053439250982,
+        "Y": -1187.0795652754441
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "L inv",
+        "Id": "25b125d18afc46ad98d0556244e8e972",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6091.9970427680046,
+        "Y": -1185.176352908305
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Violet Cloud ai",
+        "Id": "e380bbd0f1464bc8b88063ebb92753de",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5125.99232105655,
+        "Y": -756.667322749414
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Example 1",
+        "Id": "f04759ebd1c1468cb9842d5644ad1b5c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5136.7842003814358,
+        "Y": 69.449331630977952
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Example 2",
+        "Id": "b6fe5aadd07e453088451d90e0e8a5c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5131.3805371447243,
+        "Y": 499.29731552603153
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Show Applied Loads",
+        "Id": "71739b05292945f69a0fc76fd599e8c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6155.3132289233072,
+        "Y": 168.72926996056617
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Show Reactions",
+        "Id": "3b6a7c0474d84b4fa86cd19819c1c371",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6153.4053592334012,
+        "Y": 470.0135617034731
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Show AFD",
+        "Id": "b10604a67ee5445881e16a51dbc49a2c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6154.0932605745556,
+        "Y": 294.32838190763619
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Str Analysis Results",
+        "Id": "9b7efdaed27842ad8c964ba9f2f1fd14",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6146.1782759342468,
+        "Y": -763.09949437364776
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Inv Global K Matrix",
+        "Id": "dcc5fee3b1af40c7b425cc030acfb018",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6388.3678511589142,
+        "Y": -763.927710302994
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Structural Analysis",
+        "Id": "3a9aefff964a447db354d013bcadc1a0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5906.0635065777706,
+        "Y": -258.34378631912926
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "U inv",
+        "Id": "aa35e37141d64ddf892628369bd37565",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6277.7226374327174,
+        "Y": -1187.3786224413298
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Show SFD",
+        "Id": "3e6411e001574ea5b9a9d6fecaf1f41a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6154.0536661407,
+        "Y": 353.50004393587267
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Show BMD",
+        "Id": "c85c1070181349a49ed7a42043f0df49",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6152.8200809221407,
+        "Y": 410.45324881092563
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Show Control",
+        "Id": "e4b506431b564cd39f6b2242b6d315ff",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6374.8386513924142,
+        "Y": 173.12580247415207
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Show Dimension",
+        "Id": "e9f9fb25f47e4f41a93531417e26fd62",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6152.7555122879539,
+        "Y": 232.53196073197489
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Global Disp (in m and rad)",
+        "Id": "0e933bb4405a4be5b7371038f86765b0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6638.2090498438338,
+        "Y": -765.04487879210285
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Global Force (in kN and kNm)",
+        "Id": "49733cdf351a41be94e9a6947ba63821",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6888.064474048625,
+        "Y": -763.21688455005915
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Example 3",
+        "Id": "eff8acbfbf894779aace99968abfaa0c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5130.4718149919518,
+        "Y": 930.8145454022183
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Joint Info",
+        "Id": "2a60ea64f1404353bf669055b29e6b75",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7176.6402529856487,
+        "Y": -763.82695835020172
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Member Info",
+        "Id": "02401e6b8e694b3a99f2da5f304c6534",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7427.9512120769677,
+        "Y": -763.2310319612493
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Example 5 (Custom)",
+        "Id": "69615546475b4849b98409d338e18397",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5131.0569652684881,
+        "Y": 1830.6722300942531
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "XYZ Axes",
+        "Id": "f728670560d842a5aeb2f6e849aa6f83",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7976.2129078238358,
+        "Y": -763.53951175465681
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Axes Length",
+        "Id": "1f1bfb932dfe40138ff0b73df0d20ba9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7615.5243567987454,
+        "Y": -762.58249565275719
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "X Axis",
+        "Id": "7b6f8a8d88354adba9a34194f3b8440f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7737.5239414932148,
+        "Y": -641.34200749541742
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Y Axis",
+        "Id": "3752b3f9d528432ca4c8abdc8ab94741",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7862.0451714383853,
+        "Y": -641.54283437091726
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Z Axis",
+        "Id": "66129ab0236f4f6eaaf2cffdf3fce109",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7737.7947728148756,
+        "Y": -564.10869054251725
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List Create",
+        "Id": "d7c022dfb55d4c85bbfcba9294eee381",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7986.641357923083,
+        "Y": -640.97398820661692
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Axes Radius",
+        "Id": "7e7f6d8af24b4422a54a05063f77da1f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7615.5646684785643,
+        "Y": -702.32230023215743
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Origin",
+        "Id": "ed2cf93b0199420aaa4149c9fd3fed82",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7862.0547973917055,
+        "Y": -564.19919767591728
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "GeometryColor.ByGeometryColor",
+        "Id": "ed637c516b154489b6ac4e5b818cf3cc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8238.50405508234,
+        "Y": -762.35839622320736
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Example 4 (Custom)",
+        "Id": "6d5c5ccc7b1545a795e01a4218941ca6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5131.4214823703078,
+        "Y": 1399.4656300747768
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Draw Data",
+        "Id": "2cf8667b63254d8aba39c96c21482d18",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6143.06545946083,
+        "Y": -256.185403944194
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Draw Model",
+        "Id": "5ef31257532046c3a616ae2e4b8ff5f9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6596.55541923363,
+        "Y": -261.748260951392
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Draw FuncFr",
+        "Id": "97ae0fe063504aadb83fcd30ec5a4089",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6781.63871982797,
+        "Y": -24.9880449413636
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Draw FuncFr",
+        "Id": "8438b476860a495a90cfd92fa58aa6a5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6784.05346488578,
+        "Y": -159.402405095611
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Color.ByARGB",
+        "Id": "95508da4f1a6473baa552d3f1818510f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7050.68466250519,
+        "Y": -159.420403059411
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "GeometryColor.ByGeometryColor",
+        "Id": "c8dd743ca10243a4b0fc447af9490da8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7241.95099361243,
+        "Y": -30.8641869927936
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Draw Text",
+        "Id": "b22c20f0f4d54e5b9bfec443180395b2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7318.22787943843,
+        "Y": -257.473613838606
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Draw Text",
+        "Id": "28d5cefafdc648d0b9ebb6369a9fcc13",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7613.09688832945,
+        "Y": -257.922002529107
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "TextNote.ByLocation",
+        "Id": "8fb68deb34464a88a3e3fc50cf07da0a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7913.49110503346,
+        "Y": -74.5862895701428
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "TextNote.Text",
+        "Id": "017466564ab747d7828c710e449c99aa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8267.16648793856,
+        "Y": -49.4609208596428
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Text.FromStringOriginAndScale",
+        "Id": "50bc47529fee431489797118197db2ac",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8520.35215128276,
+        "Y": -135.072276330874
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "GeometryColor.ByGeometryColor",
+        "Id": "d0b599785d9949bfb8ec863dc6d01fc2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 9068.47888779777,
+        "Y": -268.049956005847
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "6711884d364044d7abc748f9f856bca4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8353.91932209906,
+        "Y": 36.1034995845251
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Palette",
+        "Id": "84462184a0b24a6bb21844a172a1bf2a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8903.01684764398,
+        "Y": -101.117594826006
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Horizontal Alignment Style",
+        "Id": "4665f399fcd045d29478476e141f43a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7599.33229228581,
+        "Y": 23.6273856564411
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Geometry.Rotate",
+        "Id": "01af6e9cbef84fbb86f67cfae56f5a65",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8790.96410563781,
+        "Y": -268.182438267146
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Views",
+        "Id": "b6b6fd6504bd4803a78b2303215d80ef",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7605.62737006747,
+        "Y": -74.0328050522128
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "801e7c8d846740019bedc7e9202e538b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8575.01870489339,
+        "Y": 3.48946439395729
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "e956d2cb3ccb4ec18ff7d02bb583b3de",
+        "Title": "Matrix Inversion (LU Decomposition)",
+        "Nodes": [
+          "b9fe5773502b4bdc843e39f5bd96b405",
+          "941da8334d6e493fb79878f5e28a8f31",
+          "2b99f007728e46d1b5f07ddfc9eb4c2f",
+          "7af95d41936041368abc80265278f894",
+          "7d54fbdacbfa48fcab2f3989f186c11f",
+          "25b125d18afc46ad98d0556244e8e972",
+          "aa35e37141d64ddf892628369bd37565"
+        ],
+        "Left": 5112.3347347020781,
+        "Top": -1242.9525768137812,
+        "Width": 1280.7212360639726,
+        "Height": 406.38985997642658,
+        "FontSize": 36.0,
+        "InitialTop": -1189.6192434804479,
+        "InitialHeight": 150.022654628066,
+        "TextblockHeight": 43.333333333333336,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "c486f557f2dd46aeb431727c00606df7",
+        "Title": "Analysis Results",
+        "Nodes": [
+          "9b7efdaed27842ad8c964ba9f2f1fd14",
+          "dcc5fee3b1af40c7b425cc030acfb018",
+          "0e933bb4405a4be5b7371038f86765b0",
+          "49733cdf351a41be94e9a6947ba63821",
+          "2a60ea64f1404353bf669055b29e6b75",
+          "02401e6b8e694b3a99f2da5f304c6534"
+        ],
+        "Left": 6136.1782759342468,
+        "Top": -818.37821212543622,
+        "Width": 1407.1062694760542,
+        "Height": 148.27871775178846,
+        "FontSize": 36.0,
+        "InitialTop": -765.04487879210285,
+        "InitialHeight": 146.94538441845509,
+        "TextblockHeight": 43.333333333333336,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "c2f05477f27641fb94819f25e326decb",
+        "Title": "Examples",
+        "Nodes": [
+          "b6fe5aadd07e453088451d90e0e8a5c8",
+          "3982263ed7404e99bfc78fbb96db8770",
+          "6dbaf129787c4b96bdf80e9dab86fa7e",
+          "69615546475b4849b98409d338e18397",
+          "eff8acbfbf894779aace99968abfaa0c",
+          "6d5c5ccc7b1545a795e01a4218941ca6"
+        ],
+        "Left": 5120.4718149919518,
+        "Top": -75.78229374128577,
+        "Width": 913.42607437457207,
+        "Height": 2552.7878571688721,
+        "FontSize": 36.0,
+        "InitialTop": -22.448960407952427,
+        "InitialHeight": 1998.1211905022055,
+        "TextblockHeight": 43.333333333333336,
+        "Background": "#FF71C6A8"
+      },
+      {
+        "Id": "ce18f4a0070d40c683770554a8f7a6ba",
+        "Title": "XYZ Axes at (0, 0, 0)",
+        "Nodes": [
+          "ed637c516b154489b6ac4e5b818cf3cc",
+          "ed2cf93b0199420aaa4149c9fd3fed82",
+          "7e7f6d8af24b4422a54a05063f77da1f",
+          "d7c022dfb55d4c85bbfcba9294eee381",
+          "66129ab0236f4f6eaaf2cffdf3fce109",
+          "3752b3f9d528432ca4c8abdc8ab94741",
+          "7b6f8a8d88354adba9a34194f3b8440f",
+          "1f1bfb932dfe40138ff0b73df0d20ba9",
+          "f728670560d842a5aeb2f6e849aa6f83"
+        ],
+        "Left": 7605.5243567987454,
+        "Top": -816.87284508799019,
+        "Width": 912.97969828359419,
+        "Height": 345.76415454547293,
+        "FontSize": 36.0,
+        "InitialTop": -763.53951175465681,
+        "InitialHeight": 344.43082121213956,
+        "TextblockHeight": 43.333333333333336,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "0c98393c74714f0ab0bc0ffc9be75147",
+        "Title": "Structural Analysis",
+        "Nodes": [
+          "245b50a5df7e4a018c6cfb987f5704b2",
+          "3a9aefff964a447db354d013bcadc1a0",
+          "e380bbd0f1464bc8b88063ebb92753de"
+        ],
+        "Left": 5115.99232105655,
+        "Top": -810.00065608274735,
+        "Width": 927.40451885455366,
+        "Height": 670.656869763618,
+        "FontSize": 36.0,
+        "InitialTop": -756.667322749414,
+        "InitialHeight": 643.32353643028478,
+        "TextblockHeight": 43.333333333333336,
+        "Background": "#FFFF7BAC"
+      },
+      {
+        "Id": "e898fee529fd4b318374d25abf6f8463",
+        "Title": "Output Control",
+        "Nodes": [
+          "71739b05292945f69a0fc76fd599e8c8",
+          "3b6a7c0474d84b4fa86cd19819c1c371",
+          "b10604a67ee5445881e16a51dbc49a2c",
+          "3e6411e001574ea5b9a9d6fecaf1f41a",
+          "c85c1070181349a49ed7a42043f0df49",
+          "e4b506431b564cd39f6b2242b6d315ff",
+          "e9f9fb25f47e4f41a93531417e26fd62"
+        ],
+        "Left": 6142.7555122879539,
+        "Top": 115.39593662723283,
+        "Width": 396.08313910446032,
+        "Height": 422.284291742907,
+        "FontSize": 36.0,
+        "InitialTop": 168.72926996056617,
+        "InitialHeight": 446.28429174290693,
+        "TextblockHeight": 43.333333333333336,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e495abcae00b4a08bccac70262672c30",
+        "Title": "Draw in Dynamo",
+        "Nodes": [
+          "b22c20f0f4d54e5b9bfec443180395b2",
+          "c8dd743ca10243a4b0fc447af9490da8",
+          "95508da4f1a6473baa552d3f1818510f",
+          "8438b476860a495a90cfd92fa58aa6a5",
+          "97ae0fe063504aadb83fcd30ec5a4089",
+          "5ef31257532046c3a616ae2e4b8ff5f9",
+          "2cf8667b63254d8aba39c96c21482d18"
+        ],
+        "Left": 6133.06545946083,
+        "Top": -315.08159428472533,
+        "Width": 1399.1624199775997,
+        "Height": 403.21740729193175,
+        "FontSize": 36.0,
+        "InitialTop": -261.748260951392,
+        "InitialHeight": 381.76021601002839,
+        "TextblockHeight": 43.333333333333336,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "4e7f7e393998478184b8cea7eb21c2a8",
+        "Title": "Text in Dynamo",
+        "Nodes": [
+          "801e7c8d846740019bedc7e9202e538b",
+          "b6b6fd6504bd4803a78b2303215d80ef",
+          "01af6e9cbef84fbb86f67cfae56f5a65",
+          "4665f399fcd045d29478476e141f43a8",
+          "84462184a0b24a6bb21844a172a1bf2a",
+          "6711884d364044d7abc748f9f856bca4",
+          "d0b599785d9949bfb8ec863dc6d01fc2",
+          "50bc47529fee431489797118197db2ac",
+          "017466564ab747d7828c710e449c99aa",
+          "8fb68deb34464a88a3e3fc50cf07da0a",
+          "28d5cefafdc648d0b9ebb6369a9fcc13"
+        ],
+        "Left": 7589.33229228581,
+        "Top": -321.5157716004793,
+        "Width": 1759.1465955119602,
+        "Height": 495.92948203033649,
+        "FontSize": 36.0,
+        "InitialTop": -268.182438267146,
+        "InitialHeight": 449.28593785167106,
+        "TextblockHeight": 43.333333333333336,
+        "Background": "#FFA4E1FF"
+      }
+    ],
+    "X": -1326.5479146233381,
+    "Y": 319.92435879078164,
+    "Zoom": 0.26520630549385193
+  }
+}
