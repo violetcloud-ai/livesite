@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const lastName = lastNameEl.value.trim();
       const email = emailEl.value.trim();
 
-      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;;
 
       if (firstName === "" || lastName === "" || email === "") {
         event.preventDefault(); 
